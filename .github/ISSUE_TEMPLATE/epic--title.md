@@ -1,7 +1,7 @@
 ---
 name: 'EPIC: TITLE'
 about: Default Template for creating epics.
-title: ''
+title: 'EPIC: TITLE'
 labels: ''
 assignees: ''
 
