@@ -1,5 +1,5 @@
 ---
-name: 'TASK: TITLE'
+name: TASK
 about: Default Template for creating tasks.
 title: 'TASK: TITLE'
 labels: ''

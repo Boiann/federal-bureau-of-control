@@ -1,5 +1,5 @@
 ---
-name: 'EPIC: TITLE'
+name: EPIC
 about: Default Template for creating epics.
 title: 'EPIC: TITLE'
 labels: ''
@@ -12,6 +12,7 @@ $\color{chartreuse}{\textsf{EPIC DESCRIPTION:}}$
 * TEXT
 
 TASKS:
+* [ ] #?
 
 
 $\color{tomato}{\textsf{ACCEPTANCE CRITERIA:}}$ Finish all tasks.
