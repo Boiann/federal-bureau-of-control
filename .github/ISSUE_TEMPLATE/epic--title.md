@@ -10,3 +10,8 @@ assignees: ''
 $\color{chartreuse}{\textsf{EPIC DESCRIPTION:}}$
 
 * TEXT
+
+TASKS:
+
+
+$\color{tomato}{\textsf{ACCEPTANCE CRITERIA:}}$ Finish all tasks.
