@@ -1,0 +1,1 @@
+web: gunicorn fbd_project.wsgi
