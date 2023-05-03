@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from fbd_app.admin import assessor_admin_site
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('assessor-admin/', assessor_admin_site.urls),
     path('summernote/', include('django_summernote.urls')),
 
 ]
