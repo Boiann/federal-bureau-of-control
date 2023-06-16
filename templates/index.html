@@ -15,7 +15,7 @@
                             <div class="image-container">
                                 {% if "placeholder" in event.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/boiann/image/upload/v1676455177/samples/landscapes/nature-mountains.jpg">
+                                    src="https://res.cloudinary.com/boiann/image/upload/v1676455172/samples/animals/three-dogs.jpg">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
@@ -23,7 +23,7 @@
                                     <p class="author">Author: {{ event.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'event_detail' event.slug  %}" class="post-link">
                                 <h2 class="card-title">{{ event.title }}</h2>
                                 <p class="card-text">{{ event.excerpt }}</p>
                             </a>
