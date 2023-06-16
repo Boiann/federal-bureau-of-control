@@ -30,7 +30,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['federal-bureau-of-control.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = [
+    'federal-bureau-of-control.herokuapp.com',
+    'localhost',
+    '127.0.0.1',
+    '8000-boiann-federalbureauofc-0239egeoc1u.ws-eu99.gitpod.io',
+]
 
 
 # Application definition
