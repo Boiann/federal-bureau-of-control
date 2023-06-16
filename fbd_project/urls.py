@@ -22,5 +22,6 @@ urlpatterns = [
     path('assessor-admin/', assessor_admin_site.urls),
     path("", include("fbd_app.urls"), name="event-urls"),
     path('summernote/', include('django_summernote.urls')),
+    path('accounts/', include('allauth.urls')),
 
 ]
