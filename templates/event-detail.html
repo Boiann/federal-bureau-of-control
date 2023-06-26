@@ -15,7 +15,7 @@
                 {% if "placeholder" in event.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%">
+                <img src=" {{ event.featured_image.url }}" width="100%">
                 {% endif %}
             </div>
         </div>
@@ -39,11 +39,9 @@
                             <form class="d-inline" action="{% url 'event_approve' event.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i
-                                        class="fas fa-heart"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i class="fa-solid fa-thumbs-up"></i></button>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i
-                                        class="far fa-heart"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i class="fa-regular fa-thumbs-up"></i></button>
                                 {% endif %}
                             </form>
                             {% else %}
