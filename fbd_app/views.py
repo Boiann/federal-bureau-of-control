@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Event
 from .forms import CommentForm
 
@@ -20,6 +21,9 @@ class EventDetail(View):
         liked = False
         if event.likes.filter(id=self.request.user.id).exists():
             liked = True
+        disliked = False
+        if event.dislikes.filter(id=self.request.user.id).exists():
+            disliked = True
 
         return render(
             request,
@@ -29,6 +33,7 @@ class EventDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked,
+                "disliked": disliked,
                 "comment_form": CommentForm(),
             },
         )
@@ -41,6 +46,9 @@ class EventDetail(View):
         liked = False
         if event.likes.filter(id=self.request.user.id).exists():
             liked = True
+        disliked = False
+        if event.dislikes.filter(id=self.request.user.id).exists():
+            disliked = True
 
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -60,6 +68,33 @@ class EventDetail(View):
                 "comments": comments,
                 "commented": True,
                 "comment_form": CommentForm(),
-                "liked": liked
+                "liked": liked,
+                "disliked": disliked,
             },
         )
+
+
+class EventApprove(View):
+
+    def post(self, request, slug):
+        event = get_object_or_404(Event, slug=slug)
+
+        if event.likes.filter(id=request.user.id).exists():
+            event.likes.remove(request.user)
+        else:
+            event.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('event_detail', args=[slug]))
+
+
+class EventDisprove(View):
+
+    def post(self, request, slug):
+        event = get_object_or_404(Event, slug=slug)
+
+        if event.dislikes.filter(id=request.user.id).exists():
+            event.dislikes.remove(request.user)
+        else:
+            event.dislikes.add(request.user)
+
+        return HttpResponseRedirect(reverse('event_detail', args=[slug]))
