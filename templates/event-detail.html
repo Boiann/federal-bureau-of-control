@@ -52,6 +52,24 @@
                         </strong>
                     </div>
                     <div class="col-1">
+                        <strong>
+                            {% if user.is_authenticated %}
+                            <form class="d-inline" action="{% url 'event_disprove' event.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if disliked %}
+                                <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i class="fa-solid fa-thumbs-down"></i></button>
+                                {% else %}
+                                <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i class="fa-regular fa-thumbs-down"></i></button>
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            {% endif %}
+                            <!-- The number of likes goes before the closing strong tag -->
+                            <span class="text-secondary">{{ event.number_of_dislikes }} </span>
+                        </strong>
+                    </div>
+                    <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
                             <!-- Our total_comments variable goes before the closing strong tag -->
