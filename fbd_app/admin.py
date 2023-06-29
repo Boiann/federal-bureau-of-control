@@ -20,6 +20,10 @@ class EventAdmin(SummernoteModelAdmin):
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
 
+    admin.site.site_header = "FBD Director Access"
+    admin.site.site_title = "FBD Director Portal"
+    admin.site.index_title = "Welcome to Federal Bureau of Control, Director"
+
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
     search_fields = ('name', 'email', 'body')
@@ -27,16 +31,3 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
-
-
-class AssessorAdminSite(admin.AdminSite):
-    site_header = "Assessor admin"
-    site_title = "Assessor Admin Portal"
-    index_title = "Welcome to Federal Bureau of Control"
-
-
-assessor_admin_site = AssessorAdminSite(name='assessor-admin')
-
-
-assessor_admin_site.register(Event)
-assessor_admin_site.register(Comment)
