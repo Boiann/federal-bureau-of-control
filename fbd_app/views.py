@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 from django.urls import reverse_lazy
 from .models import Event
 from .forms import CommentForm, EventForm
@@ -87,6 +87,20 @@ class AddEvent(LoginRequiredMixin, CreateView):
             form.instance.status = int(self.request.POST.get('status'))
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+
+class UpdateEvent(LoginRequiredMixin, UpdateView):
+    model = Event
+    form_class = EventForm
+    template_name = 'update-event.html'
+    success_url = reverse_lazy('home')
+
+
+class DeleteEvent(LoginRequiredMixin, generic.DeleteView):
+    model = Event
+    form_class = EventForm
+    template_name = 'delete-event.html'
+    success_url = reverse_lazy('home')
 
 
 class EventApprove(View):

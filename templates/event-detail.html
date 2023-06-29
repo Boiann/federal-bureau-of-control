@@ -69,6 +69,19 @@
                             <span class="text-secondary">{{ event.number_of_dislikes }} </span>
                         </strong>
                     </div>
+                    {% if request.user == event.author %}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-4 offset-xl-8">
+                                <a href="{% url 'update_event' event.slug %}" class="btn btn-signup m-1">
+                                    <i class="fa fa-edit"></i> Update/Edit Event</a>
+
+                                <a href="{% url 'delete_event' event.slug %}" class="btn btn-signup m-1">
+                                    <i class="far fa-trash-alt"></i> Delete Event</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
