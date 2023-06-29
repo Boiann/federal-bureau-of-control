@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView
+from django.urls import reverse_lazy
 from .models import Event
 from .forms import CommentForm, EventForm
 
@@ -58,9 +59,8 @@ class EventDetail(View):
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.post = event
-            comment.save()
-        else:
             comment_form = CommentForm()
+            comment.save()
 
         return render(
             request,
@@ -79,6 +79,7 @@ class EventDetail(View):
 class AddEvent(LoginRequiredMixin, CreateView):
     model = Event
     template_name = 'add-event.html'
+    success_url = reverse_lazy('home')
     form_class = EventForm
 
     def form_valid(self, form):
