@@ -53,7 +53,9 @@
                     {% endif %}
                 </ul>
                 <span class="navbar-text text-muted">
-                    adventures of a software developer
+                    {% if user.is_authenticated %}
+                    <p>FBC Agent : {{user}} </p>
+                    {% endif %}
                 </span>
             </div>
         </div>
