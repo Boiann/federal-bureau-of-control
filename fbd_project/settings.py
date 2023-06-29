@@ -34,7 +34,7 @@ ALLOWED_HOSTS = [
     'federal-bureau-of-control.herokuapp.com',
     'localhost',
     '127.0.0.1',
-    '8000-boiann-federalbureauofc-0239egeoc1u.ws-eu100.gitpod.io',
+    '8000-boiann-federalbureauofc-0239egeoc1u.ws-eu101.gitpod.io',
 ]
 
 

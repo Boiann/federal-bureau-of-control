@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import CreateView
 from .models import Event
-from .forms import CommentForm
+from .forms import CommentForm, EventForm
 
 
 class EventList(generic.ListView):
@@ -72,6 +74,18 @@ class EventDetail(View):
                 "disliked": disliked,
             },
         )
+
+
+class AddEvent(LoginRequiredMixin, CreateView):
+    model = Event
+    template_name = 'add-event.html'
+    form_class = EventForm
+
+    def form_valid(self, form):
+        if self.request.POST.get('status'):
+            form.instance.status = int(self.request.POST.get('status'))
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class EventApprove(View):
