@@ -6,6 +6,8 @@ from django.views.generic import CreateView, UpdateView
 from django.urls import reverse_lazy
 from .models import Event
 from .forms import CommentForm, EventForm
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 class EventList(generic.ListView):
@@ -76,11 +78,12 @@ class EventDetail(View):
         )
 
 
-class AddEvent(LoginRequiredMixin, CreateView):
+class AddEvent(SuccessMessageMixin, LoginRequiredMixin, CreateView):
     model = Event
     template_name = 'add-event.html'
     success_url = reverse_lazy('home')
     form_class = EventForm
+    success_message = 'Event submitted for approval'
 
     def form_valid(self, form):
         if self.request.POST.get('status'):
@@ -89,11 +92,12 @@ class AddEvent(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class UpdateEvent(LoginRequiredMixin, UpdateView):
+class UpdateEvent(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     model = Event
     form_class = EventForm
     template_name = 'update-event.html'
     success_url = reverse_lazy('home')
+    success_message = 'Event successfully updated'
 
 
 class DeleteEvent(LoginRequiredMixin, generic.DeleteView):
@@ -101,6 +105,12 @@ class DeleteEvent(LoginRequiredMixin, generic.DeleteView):
     form_class = EventForm
     template_name = 'delete-event.html'
     success_url = reverse_lazy('home')
+    success_message = 'Event successfully deleted'
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message, 'danger')
+
+        return super(DeleteEvent, self).delete(request, *args, **kwargs)
 
 
 class EventApprove(View):
