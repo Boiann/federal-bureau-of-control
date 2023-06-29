@@ -96,6 +96,13 @@ class UpdateEvent(LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy('home')
 
 
+class DeleteEvent(LoginRequiredMixin, generic.DeleteView):
+    model = Event
+    form_class = EventForm
+    template_name = 'delete-event.html'
+    success_url = reverse_lazy('home')
+
+
 class EventApprove(View):
 
     def post(self, request, slug):
