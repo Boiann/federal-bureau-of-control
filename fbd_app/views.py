@@ -10,6 +10,14 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 
 
+def splash(request):
+    return render(request, "splash.html")
+
+
+def about(request):
+    return render(request, "about.html")
+
+
 class EventList(generic.ListView):
     model = Event
     queryset = Event.objects.filter(status=1).order_by('-created_on')
