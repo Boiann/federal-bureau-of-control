@@ -3,6 +3,12 @@ from django.urls import path
 
 urlpatterns = [
     path("", views.EventList.as_view(), name="home"),
+    path("splash/", views.splash, name="splash"),
+    path("about/", views.about, name="about"),
+    path("altered-items/", views.altered, name="altered"),
+    path("objects-of-power/", views.OoP, name="OoP"),
+    path("altered-world-events/", views.AwE, name="AwE"),
+    path("access-denied/", views.denied, name="denied"),
     path('add_event/', views.AddEvent.as_view(), name='add_event'),
     path('<slug:slug>/', views.EventDetail.as_view(), name='event_detail'),
     path('like/<slug:slug>', views.EventApprove.as_view(), name='event_approve'),

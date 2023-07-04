@@ -10,6 +10,30 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 
 
+def splash(request):
+    return render(request, "splash.html")
+
+
+def about(request):
+    return render(request, "about.html")
+
+
+def altered(request):
+    return render(request, "altered-items.html")
+
+
+def OoP(request):
+    return render(request, "objects-of-power.html")
+
+
+def AwE(request):
+    return render(request, "altered-world-events.html")
+
+
+def denied(request):
+    return render(request, "access-denied.html")
+
+
 class EventList(generic.ListView):
     model = Event
     queryset = Event.objects.filter(status=1).order_by('-created_on')
