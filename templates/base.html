@@ -26,19 +26,23 @@
 
     <script>
         $(document).ready(function () {
-            if ($(window).width() < 570) {
+            if ($(window).width() < 615) {
                 $("span.brand").text("FBC");
             } else {
                 $("span.brand").text("Federal Bureau of Control");
             }
         });
         $(window).resize(function () {
-            if ($(window).width() < 570) {
+            if ($(window).width() < 615) {
                 $("span.brand").text("FBC");
             } else {
                 $("span.brand").text("Federal Bureau of Control");
             }
         });
+
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
     </script>
 
 </head>
@@ -105,12 +109,46 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Made by Code Instituters</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i></p>
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="https://control.fandom.com/wiki/Control_Wiki" target="_blank" data-toggle="tooltip" data-placement="top"
+                            title="Control Wiki Fandom">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-brands fa-wikipedia-w fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.remedygames.com/games/control/" target="_blank" data-toggle="tooltip" data-placement="top"
+                            title="Control Official Website">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-solid fa-c fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/Boiann/federal-bureau-of-control" target="_blank" data-toggle="tooltip" data-placement="top"
+                            title="Project Repository">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="small text-center text-muted">Project &copy; Bojan Bakaric 2023</div>
+                    <div class="small text-center text-muted fst-italic">
+                        The copyright and other intellectual property rights in all material on this Website are owned by
+                        <a href="https://www.remedygames.com/">Remedy Entertainment Plc.</a></div>
+                </div>
+            </div>
+        </div>
     </footer>
     <script>
         setTimeout(function () {
