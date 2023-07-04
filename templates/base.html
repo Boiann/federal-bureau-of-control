@@ -24,27 +24,6 @@
     <script src="https://kit.fontawesome.com/4fe3adf97b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <script>
-        $(document).ready(function () {
-            if ($(window).width() < 615) {
-                $("span.brand").text("FBC");
-            } else {
-                $("span.brand").text("Federal Bureau of Control");
-            }
-        });
-        $(window).resize(function () {
-            if ($(window).width() < 615) {
-                $("span.brand").text("FBC");
-            } else {
-                $("span.brand").text("Federal Bureau of Control");
-            }
-        });
-
-        $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
@@ -150,13 +129,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        setTimeout(function () {
-            let messages = document.getElementById('msg');
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 2000);
-    </script>
+    <script src="{% static 'script.js' %}"></script>
 </body>
 
 </html>
