@@ -22,3 +22,17 @@ setTimeout(function () {
     let alert = new bootstrap.Alert(messages);
     alert.close();
 }, 2000);
+
+$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+})
+
+$(document).ready(() => {
+    console.log(window.localStorage.modal);
+    if (window.localStorage.modal != "true") {
+        setTimeout(function(){
+            $("#myModal").modal('show');
+            window.localStorage.modal = true;
+        }, 2000);
+    }
+})
