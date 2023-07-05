@@ -1158,6 +1158,7 @@ progress {
   .col-md-4 {
     flex: 0 0 auto;
     width: 33.33333333%;
+    padding: 35px;
   }
   .col-md-5 {
     flex: 0 0 auto;
@@ -3760,6 +3761,7 @@ textarea.form-control-lg {
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
   color: var(--bs-navbar-active-color);
+  font-size: 110%;
 }
 .navbar-nav .dropdown-menu {
   position: static;
@@ -3922,6 +3924,9 @@ textarea.form-control-lg {
   }
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
   }
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     position: absolute;
@@ -5126,6 +5131,7 @@ textarea.form-control-lg {
   background-clip: padding-box;
   border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
   outline: 0;
+  filter: brightness(90%);
 }
 
 .modal-backdrop {

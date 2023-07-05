@@ -45,21 +45,26 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% block menu_home_class %}{% endblock %}" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'add_event' %}">Add Event</a>
+                        <a class="nav-link {% block menu_add_class %}{% endblock %}" href="{% url 'add_event' %}">Create Report</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link {% block menu_logout_class %}{% endblock %}" href="{% url 'account_logout' %}">Logout</a>
                     </li>
+                    {% if user.is_superuser %}
+                    <li>
+                        <a class="nav-link" href="{% url 'admin:index' %}">Director Access</a>
+                    </li>
+                    {% endif %}
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link {% block menu_register_class %}{% endblock %}" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link {% block menu_login_class %}{% endblock %}" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
                 </ul>
