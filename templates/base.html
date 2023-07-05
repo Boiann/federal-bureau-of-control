@@ -58,15 +58,22 @@
                         <a class="nav-link {% block menu_add_class %}{% endblock %}" href="{% url 'add_event' %}">Create
                             Report</a>
                     </li>
-                    <li>
-                        <a class="nav-link {% block menu_logout_class %}{% endblock %}"
-                            href="{% url 'account_logout' %}">Logout</a>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#warningModal"
+                            style="cursor:pointer;">Create
+                            Report</a>
                     </li>
                     {% if user.is_superuser %}
                     <li>
                         <a class="nav-link" href="{% url 'admin:index' %}">Director Access</a>
                     </li>
                     {% endif %}
+                    {% if user.is_authenticated %}
+                    <li>
+                        <a class="nav-link {% block menu_logout_class %}{% endblock %}"
+                            href="{% url 'account_logout' %}">Logout</a>
+                    </li>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link {% block menu_register_class %}{% endblock %}"
@@ -150,7 +157,7 @@
     <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#myModal">
         Launch Content Disclaimer
     </button>
-    <!-- Modal -->
+    <!--Content Warning Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -177,6 +184,31 @@
                         <hr>
                         Remember, this is a work of fiction meant to provide an imaginative escape and does not reflect
                         real events or endorse real-life actions.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Report Warning Modal -->
+    <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLongTitle">WARNING: HIGHLY CLASSIFIED DATA
+                        <hr>
+                        ACCESS RESTRICTED TO AUTHORIZED AGENTS ONLY</h5>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Only authorised Agents are allowed to view and add Altered World Events, Altered Items and
+                        Objects of Power.
+                        Register <a href="{% url 'account_signup' %}">HERE</a> to authorize access.
+                        If registered Agent, log in <a href="{% url 'account_login' %}">HERE.</a>
                     </p>
                 </div>
                 <div class="modal-footer">
