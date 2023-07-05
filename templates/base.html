@@ -32,12 +32,13 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
 
-            <a href="{% url 'home' %}">
-                <img class="logo"
+            <a href="{% url 'splash' %}">
+                <img class="logo" data-toggle="tooltip" data-placement="bottom" title="Intro Page"
                     src='https://res.cloudinary.com/boiann/image/upload/v1688470337/Pyramid_Shape_lilgag.webp'>
             </a>
 
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand"></span></a>
+            <a class="navbar-brand" href="{% url 'splash' %}" data-toggle="tooltip" data-placement="bottom"
+                title="Intro Page"><span class="brand"></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,14 +46,17 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% block menu_home_class %}{% endblock %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% block menu_home_class %}{% endblock %}" aria-current="page"
+                            href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% block menu_add_class %}{% endblock %}" href="{% url 'add_event' %}">Create Report</a>
+                        <a class="nav-link {% block menu_add_class %}{% endblock %}" href="{% url 'add_event' %}">Create
+                            Report</a>
                     </li>
                     <li>
-                        <a class="nav-link {% block menu_logout_class %}{% endblock %}" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link {% block menu_logout_class %}{% endblock %}"
+                            href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% if user.is_superuser %}
                     <li>
@@ -61,10 +65,12 @@
                     {% endif %}
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% block menu_register_class %}{% endblock %}" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link {% block menu_register_class %}{% endblock %}"
+                            href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% block menu_login_class %}{% endblock %}" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link {% block menu_login_class %}{% endblock %}"
+                            href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -151,13 +157,14 @@
                 <div class="modal-body">
                     <p>
                         This website is a work of fiction and contains fictional content. All characters, events,
-                        and situations depicted are products of and copyrighted by 
+                        and situations depicted are products of and copyrighted by
                         <a href="https://www.remedygames.com/">Remedy Entertainment Plc.</a>. Any resemblance to actual
                         persons, living or deceased, or real events is purely coincidental.
                         <hr>
                         This warning is provided to ensure that readers are aware that the content they are about to
                         engage with is entirely fictional and should not be interpreted as reflecting real events,
-                        individuals or organizations. The purpose of this fictional work is to entertain and stimulate the
+                        individuals or organizations. The purpose of this fictional work is to entertain and stimulate
+                        the
                         imagination.
                         <hr>
                         Readers are advised to exercise discretion and make informed choices based on their individual

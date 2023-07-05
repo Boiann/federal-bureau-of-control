@@ -116,12 +116,14 @@ body {
   background-position: center center;
 }
 
-#splash-title {
+#splash-text {
   text-align: center;
 }
 
-#splash-text {
-  text-align: center;
+#splash-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 #title-intro-text {
@@ -131,7 +133,7 @@ body {
 
 #splash-logo {
   height: auto;
-  width: 500px;
+  width: 250px;
 }
 
 .logo {

@@ -7,13 +7,18 @@
 <!-- Page Content-->
 <section>
     <div class="container px-4 px-lg-5">
-        <img id="splash-logo" src="https://res.cloudinary.com/boiann/image/upload/v1688458922/fbc-seal-color_ppeq9n.png" alt="" class="rounded mx-auto d-block img-fluid">
+        <img id="splash-logo" src="https://res.cloudinary.com/boiann/image/upload/v1688458922/fbc-seal-color_ppeq9n.png"
+            alt="" class="rounded mx-auto d-block img-fluid">
         <div class="row gx-4 gx-lg-5" id="title-intro-text">
-            <div class="col-lg-6">
-                <h1 class="mt-5" id="splash-title">Find, Research, Control</h1>
-                <p id="splash-text">The FBC is the U.S. government agency responsible for investigating "paranatural" phenomena -
+            <div class="col-lg-6" id="splash-container">
+                <h1 class="mt-5">Find, Research, Control</h1>
+                <p id="splash-text">The FBC is the U.S. government agency responsible for investigating "paranatural"
+                    phenomena -
                     objects, places, or elements which violate the known laws of reality and exist outside of
                     conventional scientific understanding.</p>
+                    <div>
+                        <a href="{% url 'home' %}" class="btn btn-secondary" id="splash-enter">Enter</a>
+                    </div>
             </div>
         </div>
     </div>
