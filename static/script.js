@@ -21,7 +21,7 @@ setTimeout(function () {
     let messages = document.getElementById('msg');
     let alert = new bootstrap.Alert(messages);
     alert.close();
-}, 2000);
+}, 3000);
 
 $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')

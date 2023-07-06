@@ -16,7 +16,7 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in event.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img src="https://res.cloudinary.com/boiann/image/upload/v1688458922/fbc-seal-color_ppeq9n.png" width="100%">
                 {% else %}
                 <img src=" {{ event.featured_image.url }}" width="100%">
                 {% endif %}
@@ -132,14 +132,14 @@
                 <!-- For later -->
                 {% if commented %}
                 <div class="alert alert-success alert-dismissible fade show" id="msg" role="alert">
-                    Your comment is awaiting approval
+                    Your comment is awaiting approval by the Director.
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 {% else %}
                 {% if user.is_authenticated %}
 
                 <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
+                <p>Posting Agent: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}

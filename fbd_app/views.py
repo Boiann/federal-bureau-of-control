@@ -122,7 +122,7 @@ class AddEvent(SuccessMessageMixin, LoginRequiredMixin, CreateView):
     template_name = 'add-event.html'
     success_url = reverse_lazy('home')
     form_class = EventForm
-    success_message = 'Event submitted for approval'
+    success_message = 'Report submitted for approval by the Director.'
 
     def form_valid(self, form):
         if self.request.POST.get('status'):
@@ -136,7 +136,7 @@ class UpdateEvent(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     form_class = EventForm
     template_name = 'update-event.html'
     success_url = reverse_lazy('home')
-    success_message = 'Event successfully updated'
+    success_message = 'Report successfully updated'
 
 
 class DeleteEvent(LoginRequiredMixin, generic.DeleteView):
@@ -144,7 +144,7 @@ class DeleteEvent(LoginRequiredMixin, generic.DeleteView):
     form_class = EventForm
     template_name = 'delete-event.html'
     success_url = reverse_lazy('home')
-    success_message = 'Event successfully deleted'
+    success_message = 'Report successfully deleted'
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message, 'danger')

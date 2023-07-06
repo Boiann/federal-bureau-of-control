@@ -116,6 +116,10 @@ body {
   background-position: center center;
 }
 
+p.center-text {
+  text-align: center;
+}
+
 #splash-text {
   text-align: center;
 }
