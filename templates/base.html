@@ -45,30 +45,43 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link {% block menu_home_class %}{% endblock %}" aria-current="page"
-                            href="{% url 'home' %}">Home</a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link {% block menu_about_class %}{% endblock %}" aria-current="page"
                             href="{% url 'about' %}">About</a>
                     </li>
+
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link {% block menu_home_class %}{% endblock %}" aria-current="page"
+                            href="{% url 'home' %}">Home</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#warningModal"
+                            style="cursor:pointer;">Home</a>
+                    </li>
+                    {% endif %}
+
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% block menu_add_class %}{% endblock %}" href="{% url 'add_event' %}">Create
                             Report</a>
                     </li>
-                    {% endif %}
+                    {% else %}
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#warningModal"
                             style="cursor:pointer;">Create
                             Report</a>
                     </li>
+                    {% endif %}
+
                     {% if user.is_superuser %}
                     <li>
                         <a class="nav-link" href="{% url 'admin:index' %}">Director Access</a>
                     </li>
                     {% endif %}
+
                     {% if user.is_authenticated %}
                     <li>
                         <a class="nav-link {% block menu_logout_class %}{% endblock %}"
@@ -85,6 +98,7 @@
                     </li>
                     {% endif %}
                 </ul>
+
                 <span class="navbar-text text-muted">
                     {% if user.is_authenticated %}
                     <p>FBC Agent : {{user}} </p>
