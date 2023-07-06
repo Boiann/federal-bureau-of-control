@@ -11,6 +11,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 
 
 def splash(request):
+    # raise Exception('This is a test error')      # ==> Error 500 test.
     return render(request, "splash.html")
 
 
@@ -32,6 +33,20 @@ def AwE(request):
 
 def denied(request):
     return render(request, "access-denied.html")
+
+
+def handler404(request, exception):
+    context = {}
+    response = render(request, "404.html", context=context)
+    response.status_code = 404
+    return response
+
+
+def handler500(request):
+    context = {}
+    response = render(request, "500.html", context=context)
+    response.status_code = 500
+    return response
 
 
 class EventList(generic.ListView):
