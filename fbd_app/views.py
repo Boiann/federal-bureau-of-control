@@ -14,8 +14,8 @@ def splash(request):
     return render(request, "splash.html")
 
 
-def about(request):
-    return render(request, "about.html")
+def home(request):
+    return render(request, "index.html")
 
 
 def altered(request):
@@ -37,7 +37,7 @@ def denied(request):
 class EventList(generic.ListView):
     model = Event
     queryset = Event.objects.filter(status=1).order_by('-created_on')
-    template_name = 'index.html'
+    template_name = 'reports.html'
     paginate_by = 6
 
 

@@ -48,18 +48,18 @@
 
                     <li class="nav-item">
                         <a class="nav-link {% block menu_about_class %}{% endblock %}" aria-current="page"
-                            href="{% url 'about' %}">About</a>
+                            href="{% url 'home' %}">Home</a>
                     </li>
 
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% block menu_home_class %}{% endblock %}" aria-current="page"
-                            href="{% url 'home' %}">Home</a>
+                            href="{% url 'reports' %}">Reports</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#warningModal"
-                            style="cursor:pointer;">Home</a>
+                            style="cursor:pointer;">Reports</a>
                     </li>
                     {% endif %}
 

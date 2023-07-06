@@ -1,64 +1,175 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
-{% block menu_home_class %}active{% endblock %}
+{% block menu_about_class %}active{% endblock %}
 
 {% block content %}
 
-<div class="container-fluid">
-    <div class="row">
-
-        <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for event in event_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in event.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="https://res.cloudinary.com/boiann/image/upload/v1688458922/fbc-seal-color_ppeq9n.png">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ event.featured_image.url }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ event.author }}</p>
-                                </div>
-                            </div>
-                            <a href="{% url 'event_detail' event.slug  %}" class="post-link">
-                                <h2 class="card-title">{{ event.title }}</h2>
-                                <p class="card-text">{{ event.excerpt }}</p>
-                            </a>
-                            <hr />
-                            <p class="card-text text-muted h6">{{ event.created_on}} &nbsp; <i
-                                    class="fa-solid fa-user-check"></i>
-                                {{ event.number_of_likes }} &nbsp; <i class="fa-solid fa-user-xmark"></i>
-                                {{ event.number_of_dislikes }}</p>
-                        </div>
-                    </div>
+<!-- Page Content-->
+<div class="container px-4 px-lg-5">
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0"
+                src="https://res.cloudinary.com/boiann/image/upload/v1688585865/wallpaperflare.com_wallpaper_nrvimz.jpg"
+                alt="..." /></div>
+        <div class="col-lg-5">
+            <h1 class="font-weight-light">Find, Research, Control</h1>
+            <p>The FBC is responsible for both the scientific study of paranatural elements and the protection of the
+                nation (and humanity as a whole) from these forces. Among the phenomena studied by the FBC are Altered
+                World Events (AWEs), Altered Items, Objects of Power, Places of Power, and other realms and dimensions.
+                The Oldest House, itself a paranatural location, serves as a containment and study facility for these
+                types of phenomena.</p>
+        </div>
+    </div>
+    <!-- Call to Action-->
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+        <div class="card-body">
+            <p class="text-white m-0">You can find out more about specific phenomena below.
+                Detailed submissions/descriptions of the AWE's, AI's and OoP's are available to registered agents only.
+            </p>
+        </div>
+    </div>
+    <!-- Content Row-->
+    <div class="row gx-4 gx-lg-5">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Altered
+                        World Events (AWEs)</h2>
+                    <p class="card-text">Altered World Events (AWEs) are events in which paranatural forces intrude upon
+                        perceived reality, resulting in reality being altered. AWEs are responsible for the existence of
+                        Altered Items and Objects of Power.</p>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
+                <div class="card-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#AWEModal">More Info</button>
+                </div>
             </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
-
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Altered Items</h2>
+                    <p class="card-text">Altered Items are ordinary objects which have been acted upon by paranatural
+                        forces during Altered World Events, resulting in the development of unique and sometimes
+                        dangerous properties.</p>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#AIModal">More Info</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Objects of Power</h2>
+                    <p class="card-text">Objects of Power (OoPs) are a type of Altered Item connected to the Astral
+                        Plane.
+                        Unlike ordinary Altered Items, many OoPs can be bound by parautilitarians, allowing them to
+                        wield their abilities. Objects of Power are of great importance to the Federal Bureau of
+                        Control, and many are contained within the Oldest House.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#OoPModal">More Info</button>
+                </div>
             </div>
         </div>
     </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
 </div>
+
+
+<!--AWE Modal -->
+<div class="modal fade" id="AWEModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLongTitle">Altered World Events</h5>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Altered World Events occur when paranatural forces intrude upon perceived reality. When this occurs,
+                    reality is altered, often in unpredictable and dangerous ways. These forces come from other
+                    dimensions or planes of existence, and often manifest in the form of unknown energies and
+                    resonances. The Federal Bureau of Control is responsible for investigating and containing AWE
+                    instances on a national and global scale, and devotes significant research to understanding their
+                    nature.
+
+                    AWEs appear to be affected by the human collective unconscious; paranatural forces often gravitate
+                    to archetypes created by human culture and psychology. This often results in the creation of Altered
+                    Items or Objects of Power, ordinary objects infused with paranatural energies, which gives them
+                    special properties and abilities. The nature of this connection between the collective unconscious
+                    and paranatural forces is not fully understood, and has been described on multiple occasions as
+                    "unknowable."
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--AI Modal -->
+<div class="modal fade" id="AIModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLongTitle">Altered Items</h5>
+            </div>
+            <div class="modal-body">
+                <p>
+                    In Layman's terms, an altered item is an item that has been touched by the Astral Plane dimension
+                    which connects reality to the collective unconscious. As a result of the break in the space time
+                    continuum, these items become changed as they are infused with thoughts from the collective
+                    unconscious causing it be shaped by whatever thoughts flow into it while also giving it the ability
+                    to alter reality to some degree. While some of the abilities these objects develop are random &
+                    without meaning such as a carnival game hammer causing a leprosy like disease to whoever touches it,
+                    others are clearly influenced by people's thoughts, feelings and perceptions of an item. One altered
+                    item, a movie camera, causes reality to warped into that of a dramatic action movie, while a train
+                    car involved in a horrible fatal crash seems to have taken on the emotions, memory & trauma of the
+                    victims of the crash, constantly replaying the events over and over again.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--OoP Modal -->
+<div class="modal fade" id="OoPModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLongTitle">Objects of Power</h5>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Like ordinary Altered Items, Objects of Power are archetypal objects that have been acted upon by
+                    the collective unconscious. The distinction between Objects of Power and Altered Items is somewhat
+                    ambiguous, but largely comes down to the connection OoPs share with the Astral Plane, and
+                    specifically the Board, a paranatural entity of great significance to the Federal Bureau of Control.
+                    This connection, whether intrinsic or imposed by the Board itself, enables parautilitarians - humans
+                    possessing powerful paranatural affinities - to "bind" to Objects of Power through Astral Plane
+                    rituals, gaining the powers innate in these objects in the process. This binding process seems to be
+                    facilitated entirely by the Board, furthering the implication that OoPs are distinguished by this
+                    connection; according to Bureau research, the Board evaluates who can and cannot enter the Astral
+                    Plane through Objects of Power.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 {% endblock content %}
