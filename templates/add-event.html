@@ -2,13 +2,22 @@
 
 {% load crispy_forms_tags %}
 
+{% block menu_add_class %}active{% endblock %}
+
 {% block content %}
 
 <div class="container">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-            <h1>Add Event:</h1>
-            <p>Here you can add an Event.</p>
+            <h1 style="text-align: center;">Create Report:</h1>
+            <p class="center-text">Here you can add your own report of AWE, AI or OoP, Agent.
+                <br>
+                Be aware that your report is directly submitted to current Director for review and approval.
+                <br>
+                Any use of explicit language or discrimination will not be tolerated and will result 
+                in the report dismissal and possibly a disciplinary action in response to Agent's 
+                misconduct and/or rule violation.
+            </p>
         </div>
     </div>
     <div class="row">
@@ -27,7 +36,7 @@
                 {% endif %}
 
                 <br>
-                <button type="submit" class="btn btn-signup btn-lg m-1"> Submit</button>
+                <button type="submit" class="btn btn-secondary btn-lg m-1"> Submit</button>
                 <a href="{% url 'home' %}" role="button">Go back</a>
             </form>
         </div>

@@ -91,6 +91,10 @@
   }
 }
 
+a.nav-link {
+  font-weight: 900;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -102,6 +106,52 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 0;
+  background-image: url('https://res.cloudinary.com/boiann/image/upload/v1688464728/ws1q2v359xl31_wqzpl4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+p.center-text {
+  text-align: center;
+}
+
+#splash-text {
+  text-align: center;
+}
+
+#splash-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#title-intro-text {
+  display: flex;
+  justify-content: center;
+}
+
+#splash-logo {
+  height: auto;
+  width: 250px;
+}
+
+.logo {
+  cursor: pointer;
+	width: 50px;
+	height: 50px;
+	transform: rotateY(45deg);
+	animation: rotateAnimation 1s linear infinite;
+  margin-right: 30px;
+}
+
+@keyframes rotateAnimation {
+	from {transform: rotateY(45deg);}
+	to {transform: rotateY(225deg);}
 }
 
 hr {
@@ -1114,6 +1164,7 @@ progress {
   .col-md-4 {
     flex: 0 0 auto;
     width: 33.33333333%;
+    padding: 35px;
   }
   .col-md-5 {
     flex: 0 0 auto;
@@ -2818,7 +2869,7 @@ textarea.form-control-lg {
 }
 
 .btn-secondary {
-  --bs-btn-color: #fff;
+  --bs-btn-color: #000000;
   --bs-btn-bg: #6c757d;
   --bs-btn-border-color: #6c757d;
   --bs-btn-hover-color: #fff;
@@ -3656,7 +3707,7 @@ textarea.form-control-lg {
   --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
-  --bs-navbar-brand-font-size: 1.25rem;
+  --bs-navbar-brand-font-size: 2rem;
   --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-nav-link-padding-x: 0.5rem;
@@ -3690,10 +3741,11 @@ textarea.form-control-lg {
 .navbar-brand {
   padding-top: var(--bs-navbar-brand-padding-y);
   padding-bottom: var(--bs-navbar-brand-padding-y);
-  margin-right: var(--bs-navbar-brand-margin-end);
+  margin-right: 30px;
   font-size: var(--bs-navbar-brand-font-size);
   color: var(--bs-navbar-brand-color);
   white-space: nowrap;
+  font-weight: 900;
 }
 .navbar-brand:hover, .navbar-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
@@ -3715,6 +3767,7 @@ textarea.form-control-lg {
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
   color: var(--bs-navbar-active-color);
+  font-size: 110%;
 }
 .navbar-nav .dropdown-menu {
   position: static;
@@ -3877,6 +3930,9 @@ textarea.form-control-lg {
   }
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
   }
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     position: absolute;
@@ -4083,7 +4139,7 @@ textarea.form-control-lg {
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: #fff;
+  --bs-card-bg: #d2dbe3;
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
@@ -4179,7 +4235,8 @@ textarea.form-control-lg {
 .card-img,
 .card-img-top,
 .card-img-bottom {
-  width: 100%;
+  height: 40vh;
+  object-fit: contain;
 }
 
 .card-group > .card {
@@ -5080,6 +5137,7 @@ textarea.form-control-lg {
   background-clip: padding-box;
   border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
   outline: 0;
+  filter: brightness(90%);
 }
 
 .modal-backdrop {
@@ -5103,6 +5161,7 @@ textarea.form-control-lg {
 
 .modal-header {
   display: flex;
+  flex-direction: column;
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
@@ -5117,6 +5176,7 @@ textarea.form-control-lg {
 .modal-title {
   margin-bottom: 0;
   line-height: var(--bs-modal-title-line-height);
+  text-align: center;
 }
 
 .modal-body {
@@ -10600,6 +10660,8 @@ blockquote {
 }
 #mainNav .navbar-brand {
   font-weight: 800;
+  font-size: 200%;
+  margin-right: 50px;
 }
 #mainNav .navbar-toggler {
   font-size: 0.75rem;
@@ -10609,7 +10671,7 @@ blockquote {
 }
 #mainNav .navbar-nav > li.nav-item > a.nav-link {
   font-size: 0.75rem;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 0.0625em;
   text-transform: uppercase;
 }

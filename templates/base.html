@@ -6,6 +6,11 @@
 <head>
     <title>Federal Bureau of Control</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
@@ -15,6 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/4fe3adf97b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -23,35 +29,76 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Federal Bureau of Control</span></a>
+
+            <a href="{% url 'splash' %}">
+                <img class="logo" data-toggle="tooltip" data-placement="bottom" title="Intro Page"
+                    src='https://res.cloudinary.com/boiann/image/upload/v1688470337/Pyramid_Shape_lilgag.webp'>
+            </a>
+
+            <a class="navbar-brand" href="{% url 'splash' %}" data-toggle="tooltip" data-placement="bottom"
+                title="Intro Page"><span class="brand"></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% block menu_about_class %}{% endblock %}" aria-current="page"
+                            href="{% url 'home' %}">Home</a>
                     </li>
+
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'add_event' %}">Add Event</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link {% block menu_home_class %}{% endblock %}" aria-current="page"
+                            href="{% url 'reports' %}">Reports</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#warningModal"
+                            style="cursor:pointer;">Reports</a>
+                    </li>
+                    {% endif %}
+
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link {% block menu_add_class %}{% endblock %}" href="{% url 'add_event' %}">Create
+                            Report</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#warningModal"
+                            style="cursor:pointer;">Create
+                            Report</a>
+                    </li>
+                    {% endif %}
+
+                    {% if user.is_superuser %}
+                    <li>
+                        <a class="nav-link" href="{% url 'admin:index' %}">Director Access</a>
+                    </li>
+                    {% endif %}
+
+                    {% if user.is_authenticated %}
+                    <li>
+                        <a class="nav-link {% block menu_logout_class %}{% endblock %}"
+                            href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% block menu_register_class %}{% endblock %}"
+                            href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link {% block menu_login_class %}{% endblock %}"
+                            href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
                 </ul>
+
                 <span class="navbar-text text-muted">
                     {% if user.is_authenticated %}
                     <p>FBC Agent : {{user}} </p>
@@ -77,20 +124,115 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Made by Code Instituters</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i></p>
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="https://control.fandom.com/wiki/Control_Wiki" target="_blank" data-toggle="tooltip"
+                                data-placement="top" title="Control Wiki Fandom">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-brands fa-wikipedia-w fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.remedygames.com/games/control/" target="_blank" data-toggle="tooltip"
+                                data-placement="top" title="Control Official Website">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-solid fa-c fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/Boiann/federal-bureau-of-control" target="_blank"
+                                data-toggle="tooltip" data-placement="top" title="Project Repository">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="small text-center text-muted">Project &copy; Bojan Bakaric 2023</div>
+                    <div class="small text-center text-muted fst-italic">
+                        The copyright and other intellectual property rights in all material on this Website are owned
+                        by
+                        <a href="https://www.remedygames.com/">Remedy Entertainment Plc.</a></div>
+                </div>
+            </div>
+        </div>
     </footer>
-    <script>
-        setTimeout(function () {
-            let messages = document.getElementById('msg');
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 2000);
-    </script>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#myModal">
+        Launch Content Disclaimer
+    </button>
+    <!--Content Warning Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLongTitle">FICTIONAL CONTENT WARNING</h5>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This website is a work of fiction and contains fictional content. All characters, events,
+                        and situations depicted are products of and copyrighted by
+                        <a href="https://www.remedygames.com/">Remedy Entertainment Plc.</a>. Any resemblance to actual
+                        persons, living or deceased, or real events is purely coincidental.
+                        <hr>
+                        This warning is provided to ensure that readers are aware that the content they are about to
+                        engage with is entirely fictional and should not be interpreted as reflecting real events,
+                        individuals or organizations. The purpose of this fictional work is to entertain and stimulate
+                        the
+                        imagination.
+                        <hr>
+                        Readers are advised to exercise discretion and make informed choices based on their individual
+                        preferences and sensitivities. If at any point the content becomes too uncomfortable or
+                        distressing, it is recommended to discontinue reading and prioritize one's well-being.
+                        <hr>
+                        Remember, this is a work of fiction meant to provide an imaginative escape and does not reflect
+                        real events or endorse real-life actions.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Report Warning Modal -->
+    <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLongTitle">WARNING: HIGHLY CLASSIFIED DATA
+                        <hr>
+                        ACCESS RESTRICTED TO AUTHORIZED AGENTS ONLY</h5>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Only authorised Agents are allowed to view and add Altered World Events, Altered Items and
+                        Objects of Power.
+                        Register <a href="{% url 'account_signup' %}">HERE</a> to authorize access.
+                        If registered Agent, log in <a href="{% url 'account_login' %}">HERE.</a>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
 </body>
 
 </html>

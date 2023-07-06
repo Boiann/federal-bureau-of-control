@@ -11,11 +11,12 @@ from django.contrib.messages.views import SuccessMessageMixin
 
 
 def splash(request):
+    # raise Exception('This is a test error')      # ==> Error 500 test.
     return render(request, "splash.html")
 
 
-def about(request):
-    return render(request, "about.html")
+def home(request):
+    return render(request, "index.html")
 
 
 def altered(request):
@@ -34,10 +35,24 @@ def denied(request):
     return render(request, "access-denied.html")
 
 
+def handler404(request, exception):
+    context = {}
+    response = render(request, "404.html", context=context)
+    response.status_code = 404
+    return response
+
+
+def handler500(request):
+    context = {}
+    response = render(request, "500.html", context=context)
+    response.status_code = 500
+    return response
+
+
 class EventList(generic.ListView):
     model = Event
     queryset = Event.objects.filter(status=1).order_by('-created_on')
-    template_name = 'index.html'
+    template_name = 'reports.html'
     paginate_by = 6
 
 
@@ -107,7 +122,7 @@ class AddEvent(SuccessMessageMixin, LoginRequiredMixin, CreateView):
     template_name = 'add-event.html'
     success_url = reverse_lazy('home')
     form_class = EventForm
-    success_message = 'Event submitted for approval'
+    success_message = 'Report submitted for approval by the Director.'
 
     def form_valid(self, form):
         if self.request.POST.get('status'):
@@ -121,7 +136,7 @@ class UpdateEvent(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     form_class = EventForm
     template_name = 'update-event.html'
     success_url = reverse_lazy('home')
-    success_message = 'Event successfully updated'
+    success_message = 'Report successfully updated'
 
 
 class DeleteEvent(LoginRequiredMixin, generic.DeleteView):
@@ -129,7 +144,7 @@ class DeleteEvent(LoginRequiredMixin, generic.DeleteView):
     form_class = EventForm
     template_name = 'delete-event.html'
     success_url = reverse_lazy('home')
-    success_message = 'Event successfully deleted'
+    success_message = 'Report successfully deleted'
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message, 'danger')
