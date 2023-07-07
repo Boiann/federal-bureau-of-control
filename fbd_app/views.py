@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import CreateView, UpdateView
+from django.views.generic import CreateView, UpdateView, ListView
 from django.urls import reverse_lazy
 from .models import Event
 from .forms import CommentForm, EventForm
@@ -63,7 +63,7 @@ class EventList(generic.ListView):
 class EventDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
-        queryset = Event.objects.filter(status=1)
+        queryset = Event.objects.all()
         event = get_object_or_404(queryset, slug=slug)
         comments = event.comments.filter(approved=True).order_by('created_on')
         liked = False
@@ -180,3 +180,19 @@ class EventDisprove(View):
             event.dislikes.add(request.user)
 
         return HttpResponseRedirect(reverse('event_detail', args=[slug]))
+
+
+class UserEventList(LoginRequiredMixin, ListView):
+    model = Event
+    template_name = 'user-events.html'
+
+    def get_queryset(self):
+        return Event.objects.filter(author=self.request.user)
+
+
+class EventsByOwner(LoginRequiredMixin, ListView):
+    model = Event
+    template_name = 'user-events.html'
+
+    def get_queryset(self):
+        return Event.objects.filter(author__id=self.kwargs['owner_id']).order_by('-created_on')
