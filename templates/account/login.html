@@ -28,8 +28,12 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
         <button class="btn btn-secondary right" type="submit">{% trans "Sign In" %}</button>
+        <a href="{% provider_login_url 'github' %}" class="btn btn-secondary">
+          <i class="fa fa-github fa-fw"></i>
+          <span>Login with GitHub</span>
+        </a>
+        <!-- GitHub button ends here -->
       </form>
     </div>
   </div>
