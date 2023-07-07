@@ -104,7 +104,8 @@
   height: 61vh !important;
 }
 
-.adjusted-container-logout {
+.adjusted-container-logout,
+.adjusted-container-delete {
   height: 55vh !important;
 }
 
@@ -7514,6 +7515,7 @@ textarea.form-control-lg {
 
 .mb-2 {
   margin-bottom: 0.5rem !important;
+  display: none !important;
 }
 
 .mb-3 {
