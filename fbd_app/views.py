@@ -15,6 +15,10 @@ def splash(request):
     return render(request, "index.html")
 
 
+def logout(request):
+    return render(request, 'logout.html')
+
+
 def home(request):
     return render(request, "home.html")
 
