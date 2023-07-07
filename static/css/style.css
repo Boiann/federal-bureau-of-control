@@ -91,8 +91,21 @@
   }
 }
 
-.home-cols {
+.adjusted-cols {
   padding: 10px !important;
+}
+
+.btn-adjusted {
+  margin-bottom: 10px !important;
+}
+
+.adjusted-container-login,
+.adjusted-container-github {
+  height: 61vh !important;
+}
+
+.adjusted-container-logout {
+  height: 55vh !important;
 }
 
 .rotating-text-wrapper {

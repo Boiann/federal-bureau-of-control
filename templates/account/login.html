@@ -9,10 +9,10 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container adjusted-container-login">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
-      <h3>{% trans "Agent Authorization" %}</h3>
+      <h2>{% trans "Agent Authorization" %}</h2>
 
       <p>{% blocktrans %}Welcome back to the FBC, Agent.
         <hr>
@@ -28,8 +28,8 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-secondary right" type="submit">{% trans "Sign In" %}</button>
-        <a href="{% provider_login_url 'github' %}" class="btn btn-secondary">
+        <button class="btn btn-dark right btn-adjusted" type="submit">{% trans "Log In" %}</button>
+        <a href="{% provider_login_url 'github' %}" class="btn btn-dark btn-adjusted">
           <i class="fa fa-github fa-fw"></i>
           <span>Login with GitHub</span>
         </a>

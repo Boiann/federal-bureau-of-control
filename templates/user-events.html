@@ -10,9 +10,11 @@
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <h1 style="text-align: center;">My Event Reports</h1>
-            <p class="center-text">Here you can view your own reports. You can also edit or delete them.
+            <p class="center-text">Here you can view your own reports, edit or delete them before and after the Director
+                approves it.
                 <br>
-                Be aware that any changes are directly submitted to current Director for review and approval.
+                Be aware that any changes you make to the already approved submission/s are visible on the site right away,
+                without further approval from the Director.
                 <br>
                 Any use of explicit language or discrimination will not be tolerated and will result 
                 in the report dismissal and possibly a disciplinary action in response to Agent's 
@@ -20,7 +22,7 @@
             </p>
             <div class="row">
                 {% for event in event_list %}
-                <div class="col-md-4">
+                <div class="col-md-4 adjusted-cols">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">

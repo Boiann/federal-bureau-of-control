@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container adjusted-container-github">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
       {% if process == "connect" %}
@@ -16,9 +16,9 @@
         {{ provider }}.{% endblocktrans %}</p>
       {% else %}
 
-      <h1>{% blocktrans with provider.name as provider %}Sign In Via {{ provider }}{% endblocktrans %}</h1>
+      <h1>{% blocktrans with provider.name as provider %}Log In Via {{ provider }}{% endblocktrans %}</h1>
 
-      <p>{% blocktrans with provider.name as provider %}You are about to sign in using a third party account from
+      <p>{% blocktrans with provider.name as provider %}You are about to log in using a third party account from
         {{ provider }}.{% endblocktrans %}</p>
       {% endif %}
     </div>
@@ -28,7 +28,7 @@
 
       <form method="post">
         {% csrf_token %}
-        <button type="submit" class="btn btn-secondary right">{% trans "Continue" %}</button>
+        <button type="submit" class="btn btn-dark right">{% trans "Continue" %}</button>
       </form>
     </div>
   </div>
