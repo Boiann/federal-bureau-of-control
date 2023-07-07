@@ -5,6 +5,7 @@ urlpatterns = [
     path("", views.splash, name="splash"),
     path("reports/", views.EventList.as_view(), name="reports"),
     path("home/", views.home, name="home"),
+    path("logout/", views.logout, name="logout"),
     path("altered-items/", views.altered, name="altered"),
     path("objects-of-power/", views.OoP, name="OoP"),
     path("altered-world-events/", views.AwE, name="AwE"),
