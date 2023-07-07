@@ -1,3 +1,6 @@
+// For testing modal delay firing:
+// localStorage.clear();
+
 $(document).ready(function () {
     if ($(window).width() < 615) {
         $("span.brand").text("FBC");

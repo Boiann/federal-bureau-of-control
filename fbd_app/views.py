@@ -12,11 +12,11 @@ from django.contrib.messages.views import SuccessMessageMixin
 
 def splash(request):
     # raise Exception('This is a test error')      # ==> Error 500 test.
-    return render(request, "splash.html")
+    return render(request, "index.html")
 
 
 def home(request):
-    return render(request, "index.html")
+    return render(request, "home.html")
 
 
 def altered(request):
