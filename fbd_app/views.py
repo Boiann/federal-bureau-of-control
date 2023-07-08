@@ -23,22 +23,6 @@ def home(request):
     return render(request, "home.html")
 
 
-def altered(request):
-    return render(request, "altered-items.html")
-
-
-def OoP(request):
-    return render(request, "objects-of-power.html")
-
-
-def AwE(request):
-    return render(request, "altered-world-events.html")
-
-
-def denied(request):
-    return render(request, "access-denied.html")
-
-
 def handler404(request, exception):
     context = {}
     response = render(request, "404.html", context=context)
