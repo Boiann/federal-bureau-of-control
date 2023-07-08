@@ -88,8 +88,11 @@ class EventDetail(View):
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.post = event
+            comment.approved = True
             comment_form = CommentForm()
             comment.save()
+            messages.success(request, 'Your comment has been submitted.')
+            return HttpResponseRedirect(request.path_info)
 
         return render(
             request,
