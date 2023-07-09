@@ -33,7 +33,7 @@
                 </p>
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-4 ">
+                        <div class="col-xl-4 py-1">
                             <strong>
                                 {% if user.is_authenticated %}
                                 <form class="d-inline" action="{% url 'event_approve' event.slug %}" method="POST">
@@ -75,15 +75,13 @@
                         </div>
                         {% if request.user == event.author %}
                         <div class="container">
-                            <div class="row">
-                                <div class="col-xl-4 offset-xl-8">
+                                <div class="row-xl-4 offset-xl-7">
                                     <a href="{% url 'update_event' event.slug %}" class="btn btn-dark m-1">
                                         <i class="fa fa-edit"></i> Update/Edit Event</a>
 
                                     <a href="{% url 'delete_event' event.slug %}" class="btn btn-dark m-1">
                                         <i class="far fa-trash-alt"></i> Delete Event</a>
                                 </div>
-                            </div>
                         </div>
                         {% endif %}
                     </div>

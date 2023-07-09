@@ -91,6 +91,10 @@
   }
 }
 
+.btn-like {
+  margin-left: 4px;
+}
+
 .adjusted-cols {
   padding: 10px !important;
 }
@@ -2881,7 +2885,7 @@ textarea.form-control-lg {
   vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
+    -moz-user-select: none;
           user-select: none;
   border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
   background-color: var(--bs-btn-bg);
