@@ -1,9 +1,11 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html class="h-100">
+<html class="h-100" lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Federal Bureau of Control</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
@@ -69,7 +71,8 @@
                             Report</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% block menu_userEvents_class %}{% endblock %}" href="{% url 'my_events' %}">My
+                        <a class="nav-link {% block menu_userEvents_class %}{% endblock %}"
+                            href="{% url 'my_events' %}">My
                             Reports</a>
                     </li>
                     {% else %}
@@ -104,8 +107,12 @@
                 </ul>
 
                 <span class="navbar-text text-muted">
+                    {% if user.is_superuser %}
+                    <p><strong>Director : {{user}} </strong></p>
+                    {% else %}
                     {% if user.is_authenticated %}
                     <p>FBC Agent : {{user}} </p>
+                    {% endif %}
                     {% endif %}
                 </span>
             </div>
@@ -219,7 +226,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="ModalLongTitle" style="color: red;">WARNING: HIGHLY CLASSIFIED DATA</h5>
                     <br>
-                        <h5 class="modal-title" id="ModalLongTitle">ACCESS RESTRICTED TO AUTHORIZED AGENTS ONLY</h5>
+                    <h5 class="modal-title" id="ModalLongTitle">ACCESS RESTRICTED TO AUTHORIZED AGENTS ONLY</h5>
                 </div>
                 <div class="modal-body">
                     <p>

@@ -6,6 +6,9 @@
 
 <div class="container-fluid">
     <h1 style="text-align: center;">Reports - {{user}}</h1>
+    {% if user.is_superuser %}
+    <p></p>
+    {% else %}
     <p class="center-text">Here you can view your own reports, edit or delete them before and after the Director
         approves it.
         <br>
@@ -16,6 +19,7 @@
         in the report dismissal and possibly a disciplinary action in response to Agent's
         misconduct and/or rule violation.
     </p>
+    {% endif %}
     <div class="row gx-2 gx-lg-6">
         {% for event in event_list %}
         <div class="col-md-4 adjusted-cols">
