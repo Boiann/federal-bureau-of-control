@@ -189,6 +189,11 @@ body {
   background-position: center center;
 }
 
+.placeholder-img {
+  height: 40vh;
+  object-fit: contain;
+}
+
 p.center-text {
   text-align: center;
 }

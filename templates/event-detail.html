@@ -4,22 +4,20 @@
 
 {% load crispy_forms_tags %}
 
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
+<div class="container-fluid">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-xl-6">
                 <h1 class="post-title">{{ event.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ event.author }} | {{ event.created_on }}</p>
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
+            <div class="col-xl-6">
                 {% if "placeholder" in event.featured_image.url %}
-                <img src="https://res.cloudinary.com/boiann/image/upload/v1688458922/fbc-seal-color_ppeq9n.png"
-                    width="100%">
+                <img class="img-fluid rounded mb-4 mb-lg-0 placeholder-img"
+                    src="https://res.cloudinary.com/boiann/image/upload/v1688458922/fbc-seal-color_ppeq9n.png"
+                    style="height: 50vh; object-fit: contain;">
                 {% else %}
-                <img src=" {{ event.featured_image.url }}" width="100%">
+                <img class="img-fluid rounded mb-4 mb-lg-0" src=" {{ event.featured_image.url }}">
                 {% endif %}
             </div>
         </div>
@@ -30,72 +28,64 @@
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
                     {{ event.content | safe }}
                 </p>
-                <div class="row">
-
-                    <div class="col-1">
-                        <strong>
-                            {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'event_approve' event.slug %}" method="POST">
-                                {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i
-                                        class="fa-solid fa-thumbs-up"></i></button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 ">
+                            <strong>
+                                {% if user.is_authenticated %}
+                                <form class="d-inline" action="{% url 'event_approve' event.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    {% if liked %}
+                                    <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i
+                                            class="fa-solid fa-thumbs-up"></i></button>
+                                    {% else %}
+                                    <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i
+                                            class="fa-regular fa-thumbs-up"></i></button>
+                                    {% endif %}
+                                </form>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i
-                                        class="fa-regular fa-thumbs-up"></i></button>
+                                <span class="text-secondary"><i class="far fa-heart"></i></span>
                                 {% endif %}
-                            </form>
-                            {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
-                            {% endif %}
-                            <!-- The number of likes goes before the closing strong tag -->
-                            <span class="text-secondary">{{ event.number_of_likes }} </span>
-                        </strong>
-                    </div>
-                    <div class="col-1">
-                        <strong>
-                            {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'event_disprove' event.slug %}" method="POST">
-                                {% csrf_token %}
-                                {% if disliked %}
-                                <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i
-                                        class="fa-solid fa-thumbs-down"></i></button>
+                                <span class="text-secondary">{{ event.number_of_likes }} </span>
+                            </strong>
+                            <strong>
+                                {% if user.is_authenticated %}
+                                <form class="d-inline" action="{% url 'event_disprove' event.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    {% if disliked %}
+                                    <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i
+                                            class="fa-solid fa-thumbs-down"></i></button>
+                                    {% else %}
+                                    <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i
+                                            class="fa-regular fa-thumbs-down"></i></button>
+                                    {% endif %}
+                                </form>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i
-                                        class="fa-regular fa-thumbs-down"></i></button>
+                                <span class="text-secondary"><i class="far fa-heart"></i></span>
                                 {% endif %}
-                            </form>
-                            {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
-                            {% endif %}
-                            <!-- The number of likes goes before the closing strong tag -->
-                            <span class="text-secondary">{{ event.number_of_dislikes }} </span>
-                        </strong>
-                    </div>
-                    {% if request.user == event.author %}
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-4 offset-xl-8">
-                                <a href="{% url 'update_event' event.slug %}" class="btn btn-signup m-1">
-                                    <i class="fa fa-edit"></i> Update/Edit Event</a>
+                                <span class="text-secondary">{{ event.number_of_dislikes }} </span>
+                            </strong>
+                            {% with comments.count as total_comments %}
+                            <strong class="text-secondary"><i class="far fa-comments"></i>
+                                {{ total_comments }}</strong>
+                            {% endwith %}
+                        </div>
+                        {% if request.user == event.author %}
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-4 offset-xl-8">
+                                    <a href="{% url 'update_event' event.slug %}" class="btn btn-dark m-1">
+                                        <i class="fa fa-edit"></i> Update/Edit Event</a>
 
-                                <a href="{% url 'delete_event' event.slug %}" class="btn btn-signup m-1">
-                                    <i class="far fa-trash-alt"></i> Delete Event</a>
+                                    <a href="{% url 'delete_event' event.slug %}" class="btn btn-dark m-1">
+                                        <i class="far fa-trash-alt"></i> Delete Event</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    {% endif %}
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}</strong>
-                        {% endwith %}
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -106,26 +96,28 @@
             <hr>
         </div>
     </div>
+</div>
+
+<div class="container">
     <div class="row">
         <div class="col-lg-8 card mb-4  mt-3 ">
-            <h3>Comments:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                <h3>Comments:</h3>
+                {% if comments %}
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {{ comment.name }}
                         <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date goes here -->
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
-                    <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
+                {% else %}
+                <p>This report doesn't have any comments at present.</p>
+                {% endif %}
             </div>
         </div>
         <div class="col-lg-4 card mb-4  mt-3 ">
@@ -135,10 +127,11 @@
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button type="submit" class="btn btn-dark btn-lg">Submit</button>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 {% endblock content %}
