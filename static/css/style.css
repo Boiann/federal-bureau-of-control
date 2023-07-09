@@ -95,24 +95,12 @@ del {
   display: inline-block;
   background-color: black;
   color: transparent;
-  transform: rotate(.5deg) skewx(-8deg);
+  transform: rotate(.2deg) skewx(-8deg);
   padding: 0 1em;
   margin: 0 -.25em;
   user-select: none;
   cursor: default;
   border-radius: 2px;
-  
-  &:nth-child(1) {
-    transform: rotate(1deg);
-  }
-  
-  &:nth-child(2) {
-    transform: rotate(-1deg);
-  }
-  
-  &:nth-child(5) {
-    transform: rotate(2deg);
-  }
 }
 
 .btn-like {
