@@ -91,6 +91,40 @@
   }
 }
 
+del {
+  display: inline-block;
+  background-color: black;
+  color: transparent;
+  transform: rotate(.2deg) skewx(-8deg);
+  padding: 0 1em;
+  margin: 0 -.25em;
+  user-select: none;
+  cursor: default;
+  border-radius: 2px;
+}
+
+.btn-like {
+  margin-left: 4px;
+}
+
+.adjusted-cols {
+  padding: 10px !important;
+}
+
+.btn-adjusted {
+  margin-bottom: 10px !important;
+}
+
+.adjusted-container-login,
+.adjusted-container-github {
+  height: 61vh !important;
+}
+
+.adjusted-container-logout,
+.adjusted-container-delete {
+  height: 55vh !important;
+}
+
 .rotating-text-wrapper {
   display: flex;
   flex-direction: column;
@@ -169,6 +203,11 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
+}
+
+.placeholder-img {
+  height: 40vh;
+  object-fit: contain;
 }
 
 p.center-text {
@@ -356,7 +395,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: var(--bs-link-hover-color);
+  color: #000;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -2858,7 +2897,7 @@ textarea.form-control-lg {
   vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
+    -moz-user-select: none;
           user-select: none;
   border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
   background-color: var(--bs-btn-bg);
@@ -3658,7 +3697,7 @@ textarea.form-control-lg {
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
   font-size: var(--bs-nav-link-font-size);
   font-weight: var(--bs-nav-link-font-weight);
-  color: var(--bs-nav-link-color);
+  color: #222529;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -3816,6 +3855,8 @@ textarea.form-control-lg {
   --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -7497,6 +7538,7 @@ textarea.form-control-lg {
 
 .mb-2 {
   margin-bottom: 0.5rem !important;
+  display: none !important;
 }
 
 .mb-3 {

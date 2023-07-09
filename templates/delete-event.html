@@ -4,12 +4,12 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container adjusted-container-delete">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-            <h3>Delete Event:</h3>
-            <br /><br />
-            <h3>Delete: {{ event.title }}</h3>
+            <h2>Delete Event:</h2>
+            <br />
+            <h3>{{ event.title }}</h3>
             <br />
         </div>
     </div>
@@ -20,8 +20,9 @@
                 <strong>Are you sure you want to delete this Event?</strong>
                 </select>
                 <br>
+                <br>
                 <button type="submit" class="btn btn-danger btn-lg m-1">Delete</button>
-                <a href="{% url 'home' %}" role="button">Go back</a>
+                <a href="{% url 'my_events' %}" role="button">Go back</a>
         </div>
     </div>
     <br>

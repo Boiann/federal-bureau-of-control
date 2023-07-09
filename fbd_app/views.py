@@ -23,22 +23,6 @@ def home(request):
     return render(request, "home.html")
 
 
-def altered(request):
-    return render(request, "altered-items.html")
-
-
-def OoP(request):
-    return render(request, "objects-of-power.html")
-
-
-def AwE(request):
-    return render(request, "altered-world-events.html")
-
-
-def denied(request):
-    return render(request, "access-denied.html")
-
-
 def handler404(request, exception):
     context = {}
     response = render(request, "404.html", context=context)
@@ -104,8 +88,11 @@ class EventDetail(View):
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.post = event
+            comment.approved = True
             comment_form = CommentForm()
             comment.save()
+            messages.success(request, 'Your comment has been submitted.')
+            return HttpResponseRedirect(request.path_info)
 
         return render(
             request,
@@ -124,7 +111,7 @@ class EventDetail(View):
 class AddEvent(SuccessMessageMixin, LoginRequiredMixin, CreateView):
     model = Event
     template_name = 'add-event.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('my_events')
     form_class = EventForm
     success_message = 'Report submitted for approval by the Director.'
 
@@ -139,7 +126,7 @@ class UpdateEvent(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     model = Event
     form_class = EventForm
     template_name = 'update-event.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('my_events')
     success_message = 'Report successfully updated'
 
 
@@ -147,7 +134,7 @@ class DeleteEvent(LoginRequiredMixin, generic.DeleteView):
     model = Event
     form_class = EventForm
     template_name = 'delete-event.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('my_events')
     success_message = 'Report successfully deleted'
 
     def delete(self, request, *args, **kwargs):

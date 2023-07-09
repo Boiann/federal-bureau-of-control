@@ -1,9 +1,11 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html class="h-100">
+<html class="h-100" lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Federal Bureau of Control</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
@@ -29,7 +31,7 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-xl navbar-light">
         <div class="container-fluid">
 
             <a href="{% url 'splash' %}">
@@ -44,7 +46,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-3 mb-lg-0">
 
                     <li class="nav-item">
                         <a class="nav-link {% block menu_about_class %}{% endblock %}" aria-current="page"
@@ -69,7 +71,8 @@
                             Report</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% block menu_userEvents_class %}{% endblock %}" href="{% url 'my_events' %}">My
+                        <a class="nav-link {% block menu_userEvents_class %}{% endblock %}"
+                            href="{% url 'my_events' %}">My
                             Reports</a>
                     </li>
                     {% else %}
@@ -82,7 +85,7 @@
 
                     {% if user.is_superuser %}
                     <li>
-                        <a class="nav-link" href="{% url 'admin:index' %}">Director Access</a>
+                        <a class="nav-link" href="{% url 'admin:index' %}" target="_blank">Director Access</a>
                     </li>
                     {% endif %}
 
@@ -104,8 +107,12 @@
                 </ul>
 
                 <span class="navbar-text text-muted">
+                    {% if user.is_superuser %}
+                    <p><strong>Director : {{user}} </strong></p>
+                    {% else %}
                     {% if user.is_authenticated %}
                     <p>FBC Agent : {{user}} </p>
+                    {% endif %}
                     {% endif %}
                 </span>
             </div>
@@ -172,7 +179,7 @@
     </footer>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#myModal">
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal">
         Launch Content Disclaimer
     </button>
     <!--Content Warning Modal -->
@@ -205,7 +212,7 @@
                     </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -217,9 +224,9 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="ModalLongTitle">WARNING: HIGHLY CLASSIFIED DATA
-                        <hr>
-                        ACCESS RESTRICTED TO AUTHORIZED AGENTS ONLY</h5>
+                    <h5 class="modal-title" id="ModalLongTitle" style="color: red;">WARNING: HIGHLY CLASSIFIED DATA</h5>
+                    <br>
+                    <h5 class="modal-title" id="ModalLongTitle">ACCESS RESTRICTED TO AUTHORIZED AGENTS ONLY</h5>
                 </div>
                 <div class="modal-body">
                     <p>
@@ -230,7 +237,7 @@
                     </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
