@@ -43,7 +43,7 @@
                                             class="fa-solid fa-thumbs-up"></i></button>
                                     {% else %}
                                     <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i
-                                            class="fa-regular fa-thumbs-up"></i></button>
+                                            class="fa-regular fa-thumbs-up" data-toggle="tooltip" data-placement="bottom" title="Approve"></i></button>
                                     {% endif %}
                                 </form>
                                 {% else %}
@@ -60,7 +60,7 @@
                                             class="fa-solid fa-thumbs-down"></i></button>
                                     {% else %}
                                     <button type="submit" name="blogpost_id" value="{{event.slug}}" class="btn-like"><i
-                                            class="fa-regular fa-thumbs-down"></i></button>
+                                            class="fa-regular fa-thumbs-down" data-toggle="tooltip" data-placement="bottom" title="Disprove"></i></button>
                                     {% endif %}
                                 </form>
                                 {% else %}
