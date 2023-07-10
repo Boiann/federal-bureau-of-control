@@ -9,17 +9,17 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-            <h1 style="text-align: center;">Create Report:</h1>
+            <h1 style="text-align: center;" aria-label="Create Report:">Create Report:</h1>
             {% if user.is_superuser %}
             <p></p>
             {% else %}
             <p class="center-text">Here you can add your own report of AWE, AI or OoP, Agent.
                 <br>
                 Be aware that your report is directly submitted to current Director for review and approval.
-                The director reserves the right to censor any text that is deemed information-hazzard.
+                The director reserves the right to censor any text that is deemed information-hazard.
                 <br>
-                Any use of explicit language or discrimination will not be tolerated and will result 
-                in the report dismissal and possibly a disciplinary action in response to Agent's 
+                Any use of explicit language or discrimination will not be tolerated and will result
+                in the report dismissal and possibly a disciplinary action in response to Agent's
                 misconduct and/or rule violation.
             </p>
             {% endif %}
@@ -34,15 +34,15 @@
                 {{ form.featured_image | as_crispy_field }}
 
                 {% if request.user.is_superuser %}
-                <select name="status" required>
+                <select name="status" required aria-label="Status">
                     <option value="0" selected>Draft</option>
                     <option value="1">Published</option>
                 </select>
                 {% endif %}
 
                 <br>
-                <button type="submit" class="btn btn-secondary btn-lg m-1"> Submit</button>
-                <a href="{% url 'home' %}" role="button">Go back</a>
+                <button type="submit" class="btn btn-secondary btn-lg m-1" aria-label="Submit"> Submit</button>
+                <a href="{% url 'home' %}" role="button" aria-label="Go back">Go back</a>
             </form>
         </div>
     </div>
