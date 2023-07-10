@@ -182,4 +182,5 @@ class EventsByOwner(LoginRequiredMixin, ListView):
     template_name = 'user-events.html'
 
     def get_queryset(self):
-        return Event.objects.filter(author__id=self.kwargs['owner_id']).order_by('-created_on')
+        return Event.objects.filter(
+            author__id=self.kwargs['owner_id']).order_by('-created_on')
