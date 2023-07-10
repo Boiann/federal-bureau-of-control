@@ -115,16 +115,6 @@ del {
   margin-bottom: 10px !important;
 }
 
-.adjusted-container-login,
-.adjusted-container-github {
-  height: 61vh !important;
-}
-
-.adjusted-container-logout,
-.adjusted-container-delete {
-  height: 55vh !important;
-}
-
 .rotating-text-wrapper {
   display: flex;
   flex-direction: column;

@@ -9,7 +9,7 @@
 
 {% block content %}
 
-<div class="container adjusted-container-login">
+<div class="container">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
       <h2>{% trans "Agent Authorization" %}</h2>
@@ -33,6 +33,7 @@
         {% endif %}
         <button class="btn btn-dark right btn-adjusted" type="submit"
           aria-label="Log In button">{% trans "Log In" %}</button>
+          <!-- GitHub Login button -->
         <a href="{% provider_login_url 'github' %}" class="btn btn-dark btn-adjusted"
           aria-label="Login with GitHub button">
           <i class="fa fa-github fa-fw"></i>

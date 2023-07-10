@@ -230,6 +230,36 @@
             </div>
         </div>
     </div>
+
+    <!--Report Warning Modal -->
+    <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="color: red;" aria-label="Warning: Highly Classified Data">WARNING:
+                        HIGHLY CLASSIFIED DATA</h5>
+                    <br>
+                    <h5 class="modal-title" aria-label="Access Restricted to Authorized Agents Only">ACCESS RESTRICTED
+                        TO AUTHORIZED AGENTS
+                        ONLY</h5>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Only authorised Agents are allowed to view and add Altered World Events, Altered Items and
+                        Objects of Power.
+                        Register <a href="{% url 'account_signup' %}" aria-label="Register Here">HERE</a> to authorize
+                        access.
+                        If registered Agent, log in <a href="{% url 'account_login' %}"
+                            aria-label="Log in Here">HERE.</a>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="{% static 'script.js' %}"></script>
 </body>
 
