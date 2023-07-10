@@ -8,6 +8,7 @@ $(document).ready(function () {
         $("span.brand").text("Federal Bureau of Control");
     }
 });
+
 $(window).resize(function () {
     if ($(window).width() < 615) {
         $("span.brand").text("FBC");
@@ -17,8 +18,8 @@ $(window).resize(function () {
 });
 
 $(document).ready(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-})
+    $('[data-toggle="tooltip"]').tooltip();
+});
 
 setTimeout(function () {
     let messages = document.getElementById('msg');
@@ -27,8 +28,8 @@ setTimeout(function () {
 }, 3000);
 
 $('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').trigger('focus')
-})
+    $('#myInput').trigger('focus');
+});
 
 $(document).ready(() => {
     console.log(window.localStorage.modal);
@@ -38,4 +39,4 @@ $(document).ready(() => {
             window.localStorage.modal = true;
         }, 2000);
     }
-})
+});
