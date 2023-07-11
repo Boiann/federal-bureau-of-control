@@ -138,6 +138,11 @@ class UpdateEvent(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy('my_events')
     success_message = 'Report successfully updated'
 
+    # Redirect the user back to the event that was updated
+    def get_success_url(self):
+        event = self.object
+        return reverse_lazy('event_detail', kwargs={'slug': event.slug})
+
 
 # View class for deleting an event/report
 class DeleteEvent(LoginRequiredMixin, generic.DeleteView):
