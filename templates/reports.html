@@ -20,9 +20,11 @@
                 <div class="card-body">
                     <div class="image-container">
                         {% if "placeholder" in event.featured_image.url %}
+                        <!-- Display placeholder image -->
                         <img class="card-img-top"
                             src="https://res.cloudinary.com/boiann/image/upload/v1688458922/fbc-seal-color_ppeq9n.png" alt="FBC logo image">
                         {% else %}
+                        <!-- Display user submitted image -->
                         <img class="card-img-top" src="{{ event.featured_image.url }}" alt="user submitted image">
                         {% endif %}
                         <p class="author">Author: {{ event.author }}</p>
@@ -47,13 +49,16 @@
     </div>
 </div>
 
+<!-- Pagination -->
 {% if is_paginated %}
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
+        <!-- Display previous page link -->
         <li><a href="?page={{ page_obj.previous_page_number }}" class="btn btn-dark btn-sm" aria-label="Previous page">&laquo; PREV</a></li>
         {% endif %}
         {% if page_obj.has_next %}
+        <!-- Display next page link -->
         <li><a href="?page={{ page_obj.next_page_number }}" class="btn btn-dark btn-sm" aria-label="Next page">NEXT &raquo;</a></li>
         {% endif %}
     </ul>
