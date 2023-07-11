@@ -18,7 +18,7 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <br>
-                <button type="submit" class="btn btn-dark btn-lg m-1" aria-label="Update">Update</button>
+                <button type="submit" class="btn btn-success btn-lg m-1" aria-label="Update">Update</button>
                 <a href="{% url 'my_events' %}" role="button" aria-label="Go back">Go back</a>
             </form>
         </div>
