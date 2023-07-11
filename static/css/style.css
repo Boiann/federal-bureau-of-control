@@ -91,7 +91,7 @@
   }
 }
 
-del {
+del, strike {
   display: inline-block;
   background-color: black;
   color: transparent;
