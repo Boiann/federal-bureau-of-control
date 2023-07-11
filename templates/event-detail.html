@@ -33,6 +33,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-4 py-1">
+                            
+                            <!-- Like buttons and forms -->
                             <strong>
                                 {% if user.is_authenticated %}
                                 <form class="d-inline" action="{% url 'event_approve' event.slug %}" method="POST">
@@ -52,6 +54,8 @@
                                 <span class="text-secondary">{{ event.number_of_likes }}
                                 </span>
                             </strong>
+
+                            <!-- Dislike buttons and forms -->
                             <strong>
                                 {% if user.is_authenticated %}
                                 <form class="d-inline" action="{% url 'event_disprove' event.slug %}" method="POST">
@@ -68,6 +72,8 @@
                                 {% else %}
                                 <span class="text-secondary"><i class="far fa-heart"></i></span>
                                 {% endif %}
+
+                                <!-- Comment counts -->
                                 <span class="text-secondary">{{ event.number_of_dislikes }} </span>
                             </strong>
                             {% with comments.count as total_comments %}
@@ -75,6 +81,8 @@
                                 {{ total_comments }}</strong>
                             {% endwith %}
                         </div>
+
+                        <!-- Update/Edit and Delete Event buttons -->
                         {% if request.user == event.author %}
                         <div class="container">
                             <div class="row-xl-4 offset-xl-7">
@@ -100,6 +108,7 @@
     </div>
 </div>
 
+<!-- Comments section -->
 <div class="container">
     <div class="row">
         <div class="col-lg-8 card mb-4 mt-3 ">
@@ -127,6 +136,8 @@
             <div class="card-body">
                 <h3>Leave a comment:</h3>
                 <p>Posting Agent: {{ user.username }}</p>
+
+                <!-- Comment form -->
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}

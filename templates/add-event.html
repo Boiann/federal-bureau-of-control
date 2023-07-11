@@ -27,12 +27,15 @@
     </div>
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
+
+            <!-- Form for creating a new report -->
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.title | as_crispy_field }}
                 {{ form.content | as_crispy_field }}
                 {{ form.featured_image | as_crispy_field }}
 
+                <!-- If logged in as superuser, choice of publish or draft report -->
                 {% if request.user.is_superuser %}
                 <select name="status" required aria-label="Status">
                     <option value="0" selected>Draft</option>

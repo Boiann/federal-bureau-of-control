@@ -10,8 +10,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
+            <!-- Agent Authorization Request Heading -->
             <h3>{% trans "Agent Authorization Request" %}</h3>
 
+            <!-- Description -->
             <p>{% blocktrans %}Welcome back to the FBC, Agent.
                 <hr>
                 Are you already authorized? Then sign in
@@ -26,6 +28,7 @@
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
+                <!-- Sign Up Button -->
                 <button class="btn btn-dark right" type="submit">{% trans "Sign Up" %} &raquo;</button>
             </form>
         </div>

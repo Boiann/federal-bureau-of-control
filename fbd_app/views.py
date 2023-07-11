@@ -10,19 +10,23 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 
 
+# View function for the splash page
 def splash(request):
     # raise Exception('This is a test error')      # ==> Error 500 test.
     return render(request, "index.html")
 
 
+# View function for logging out
 def logout(request):
     return render(request, 'logout.html')
 
 
+# View function for the home page
 def home(request):
     return render(request, "home.html")
 
 
+# Error handler for 404 page not found
 def handler404(request, exception):
     context = {}
     response = render(request, "404.html", context=context)
@@ -30,6 +34,7 @@ def handler404(request, exception):
     return response
 
 
+# Error handler for 500 internal server error
 def handler500(request):
     context = {}
     response = render(request, "500.html", context=context)
@@ -37,6 +42,7 @@ def handler500(request):
     return response
 
 
+# View class for listing events/reports
 class EventList(generic.ListView):
     model = Event
     queryset = Event.objects.filter(status=1).order_by('-created_on')
@@ -44,6 +50,7 @@ class EventList(generic.ListView):
     paginate_by = 6
 
 
+# View class for displaying event details and handling comments
 class EventDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -108,6 +115,7 @@ class EventDetail(View):
         )
 
 
+# View class for adding a new event/report
 class AddEvent(SuccessMessageMixin, LoginRequiredMixin, CreateView):
     model = Event
     template_name = 'add-event.html'
@@ -122,6 +130,7 @@ class AddEvent(SuccessMessageMixin, LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
+# View class for updating an existing event/report
 class UpdateEvent(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     model = Event
     form_class = EventForm
@@ -130,6 +139,7 @@ class UpdateEvent(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     success_message = 'Report successfully updated'
 
 
+# View class for deleting an event/report
 class DeleteEvent(LoginRequiredMixin, generic.DeleteView):
     model = Event
     form_class = EventForm
@@ -143,6 +153,7 @@ class DeleteEvent(LoginRequiredMixin, generic.DeleteView):
         return super(DeleteEvent, self).delete(request, *args, **kwargs)
 
 
+# View class for handling event likes
 class EventApprove(View):
 
     def post(self, request, slug):
@@ -156,6 +167,7 @@ class EventApprove(View):
         return HttpResponseRedirect(reverse('event_detail', args=[slug]))
 
 
+# View class for handling event dislikes
 class EventDisprove(View):
 
     def post(self, request, slug):
@@ -169,6 +181,7 @@ class EventDisprove(View):
         return HttpResponseRedirect(reverse('event_detail', args=[slug]))
 
 
+# View class for displaying events/reports by the current user
 class UserEventList(LoginRequiredMixin, ListView):
     model = Event
     template_name = 'user-events.html'
@@ -177,6 +190,7 @@ class UserEventList(LoginRequiredMixin, ListView):
         return Event.objects.filter(author=self.request.user)
 
 
+# View class for displaying events/reports by a specific owner
 class EventsByOwner(LoginRequiredMixin, ListView):
     model = Event
     template_name = 'user-events.html'

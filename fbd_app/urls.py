@@ -1,6 +1,7 @@
 from . import views
 from django.urls import path
 
+# Defined URL patterns
 urlpatterns = [
     path("", views.splash, name="splash"),
     path("reports/", views.EventList.as_view(), name="reports"),
