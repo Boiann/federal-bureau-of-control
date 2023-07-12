@@ -3,11 +3,11 @@ https://github.com/Boiann/budget-calculator -->
 
 # FEDERAL BUREAU OF CONTROL
 
-Short description
+<!-- Short description -->
 
 <!-- image -->
 
-Visit the live site
+Visit the live site HERE-Link
 
 ---
 
@@ -24,7 +24,10 @@ Visit the live site
   * [Colour Scheme](#colour-scheme)
   * [Imagery](#imagery)
   * [Structure](#structure)
+  * [Database Design](#database-design)
   * [Wireframes](#wireframes)
+
+* [Agile Project Management](#agile-project-management)
 
 * [Features](#features)
 
@@ -40,15 +43,16 @@ Visit the live site
 
 * [Credits](#credits)
   * [Code used and adapted](#code-used-and-adapted)
+  * [Websites visited for info and solutions](#websites-visited-for-info-and-solutions)
   * [Acknowledgments](#acknowledgments)
 
 ---
 
 ## **Project Overview**
 
+---
 
 ### **Project Goals**
-
 
 [Back to top ⇧](#federal-bureau-of-control)
 
@@ -58,9 +62,7 @@ Visit the live site
 
 ### **User Expectations**
 
-
 ### **User Stories**
-
 
 [Back to top ⇧](#federal-bureau-of-control)
 
@@ -83,6 +85,10 @@ Visit the live site
 ### **Structure**
 
 <!-- Flowchart -->
+
+### **Database Design**
+
+<!-- Description and schema -->
  
 ### **Wireframes**
 
@@ -92,9 +98,19 @@ Visit the live site
 
 ---
 
+## **Agile Project Management**
+
+[Back to top ⇧](#federal-bureau-of-control)
+
+---
+
 ## **Features**
 
 <!-- Features images/gifs -->
+
+[Back to top ⇧](#federal-bureau-of-control)
+
+---
 
 ## **Future Implementations**
 
@@ -108,11 +124,7 @@ Visit the live site
 
 ### **Languages Used**
 
-* 
-
 ### **Programs Used**
-
-* 
 
 [Back to top ⇧](#federal-bureau-of-control)
 
@@ -134,13 +146,9 @@ Visit the live site
 
 ### **Code used and adapted**
 
-* 
-
-### **Websites visited to gather knowledge**
-
+### **Websites visited for info and solutions**
 
 ###  **Acknowledgments**
-
 
 [Back to top ⇧](#federal-bureau-of-control)
 
