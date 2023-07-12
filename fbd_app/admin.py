@@ -33,6 +33,12 @@ class CommentAdmin(admin.ModelAdmin):
     search_fields = ('name', 'email', 'body')
     actions = ['approve_comments']
 
+    # Override the get_form method to make the email field optional
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        form.base_fields['email'].required = False
+        return form
+
     # Action method to update the approved status of selected comments
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
