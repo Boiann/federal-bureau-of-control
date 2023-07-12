@@ -5,14 +5,18 @@ https://github.com/Boiann/boudoir-studio -->
 
 [Main README.md file](/README.md)
 
-View live project
+<!-- View live project -->
 
-View GitHub repository
+<!-- View GitHub repository -->
 
 ---
 ## **Contents**
 * [Automated Testing](#automated-testing)
-  * [W3C Validator](#w3c-validator)
+  * [W3C HTML Validator](#w3c-html-validator)
+  * [W3C CSS Validator](#w3c-css-validator)
+  * [JSHINT Javascript Validator](#jshint-javascript-validator)
+  * [CI Python Linter](#ci-python-linter)
+  * [WAVE WebAim](#wave-webaim)
   * [Lighthouse](#lighthouse)
 
 * [Accessibility](#accessibility) 
@@ -20,6 +24,7 @@ View GitHub repository
 
 * [Manual Testing](#manual-testing)
   * [Testing User Stories](#testing-user-stories)
+
   * [Full Testing](#full-testing)
     * [Features](#features)
     * [Responsiveness](#responsiveness)
@@ -34,17 +39,19 @@ View GitHub repository
 
 ## Automated Testing
 
-### **W3C Validator**
+### **W3C HTML Validator**
 
+### **W3C CSS Validator**
+
+### **JSHINT Javascript Validator**
+
+### **CI Python Linter**
+
+### **WAVE WebAim**
 
 ### **Lighthouse**
 
-
----
-
-## **Accessibility**
-### **WAVE WebAim**
-
+[Back to top ⇧](#federal-bureau-of-control---testing)
 
 ---
 
@@ -63,13 +70,17 @@ View GitHub repository
   * **title**
     * description
 
+[Back to top ⇧](#federal-bureau-of-control---testing)
+
+---
+
 ### **Full Testing**
 
 #### **Features**
 
-
 #### **Responsiveness**
 
+[Back to top ⇧](#federal-bureau-of-control---testing)
 
 ---
 
@@ -81,6 +92,8 @@ View GitHub repository
 
 ### **Solved Bugs**
 
+[Back to top ⇧](#federal-bureau-of-control---testing)
+
 ---
 
 ## **Browser compatibility**
@@ -88,6 +101,6 @@ The website was tested on the following browsers with no issues found:
 
 * Google Chrome:
 
----
-
 [Back to top ⇧](#federal-bureau-of-control---testing)
+
+***
