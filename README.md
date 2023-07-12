@@ -138,6 +138,8 @@ Visit the live site HERE-Link
 
 ## **Testing**
 
+Testing information can be found in a separate testing file [TESTING.md](/TESTING.md).
+
 [Back to top ⇧](#federal-bureau-of-control)
 
 ---
