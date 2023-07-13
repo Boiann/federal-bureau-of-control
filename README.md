@@ -116,19 +116,62 @@ Adding all of these things together (and much more) will hopefuly give any user 
 
 ### **Colour Scheme**
 
-<!-- Colour Palette image -->
+The color scheme used in the project is not explicitly defined. Using Bootstrap CSS class selectors and templates, the color scheme is a combination of light and dark colors, with white, gray, and other colors depending on the specific CSS styles applied (red/green for update/delete report). If not for the background image, it would be dark/black text over white background. This is done on purpose to maintain site cleanliness and appear more official/governmental.
 
-<!-- Short description -->
 
 ### **Imagery**
 
-<!-- images -->
+Only couple of images are used that are not user-submitted; 
+ - the background inverted pyramid - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1688484957/c1b9dbyz6skmpuslnycf.png "Link to inverted pyramid background image")
+ - the inverted pyramid spinning logo(used for favicon too) - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1688470337/Pyramid_Shape_lilgag.webp "Link to inverted pyramid logo image")
+ - FBD Seal image found on intro/splash page (used as a report placeholder too) - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1688458922/fbc-seal-color_ppeq9n.png "Link to FBC Seal image")
+ - FBD offices image found on home - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1688585865/wallpaperflare.com_wallpaper_nrvimz.jpg "Link to FBC offices image")
 
-<!-- short description -->
+All other images are user-submitted for their own report, first couple of created to represent what this website could look like with more users.  
 
 ### **Structure**
 
-<!-- Flowchart -->
+  - FBC website is structured in a user friendly and easy to navigate way.
+
+  - *Intro/Splash and home pages:*
+
+    - When the index first loads, the user is presented with intro/splash page explaining the basic purpose of the site.
+    - Upon first load of the index page, content disclaimer/warning modal will fire. Any subsequent page visit will not fire the disclaimer modal automatically, but user can revisit it later with pressing 'Launch Content Disclaimer' at the bottom of every page.
+    - Using MVT-based framework (Model, View, Template) base template is created with head, navigation and footer being the same on all pages, adding specific page content to it.
+    - User can enter the home page using 'Enter' button presented at the middle of intro page, or use navigation link at the top of the page.
+    - User can open home page with more detailed info about the FBC and various phenomena. Each phenomenon has a card with short description, and a button that fires a modal allowing for more detail on each phenomenon type.
+    - User can come back to the intro/splash page by clicking on the FBC logo or title text with handy tooltips explaining this. 
+
+  - *Registernig, logging in/out:*  
+    - First time/unregistered user may click on 'Reports' and 'Create Report' nav links but will be met with 'ACCESS RESTRICTED TO AUTHORIZED AGENTS ONLY' modal message. The modal itself contains links to register/login pages.
+    - First time user can register on the register page. The page contains redirect links to login if the user is mistakenly on register page, and link to login page if the user wishes to use GitHub authorisation to access site.
+    - If using GitHub auth, the user is brought to the 'Log in via Github' page where the user can continue with GitHub authorization.
+    - Upon registering, the 'Register' link is replaced by 'Logout' link, allowing the user to sign out from the site.
+    - Logged in users will see their username displayed in the top right corner, in the style of 'FBC Agent: "username"'.
+    - The user can now open the 'reports' and 'create report' pages.
+    - If the logged in user is admin, instead of 'FBC Agent: "username"', the right corner will read 'Director: "username"'.
+    - Logged in admin user will also have additional link in the navbar - 'Director Access' which opens admin site in a separate tab.
+    - When logging in the user is brought to the home page instead of index/splash page.
+    - When logging out, the user is asked 'Are you sure' before signing out.
+    - When signed out, the user is brought to the index/splash page.
+
+  - *Reports page:*
+    - The user is presented with a paginated view of published and approved report submissions.
+    - Each report card consists of image, title, author, time of submission, and approval/denial counters.
+    - If the user clicks on a report, the main text is presented, along image, title, author, time of submission, and approval/denial counters.
+    - The approve/deny buttons (thumbs up and down) are clickable and interactive, change if the user clicks them.
+    - The user can add comment to the report with success message after submission, there is no admin approval for comments.
+    - The user can see other people's comments .
+
+  - *My Reports page:*
+    - This page contains user's submitted reports, even if they are not published/approved.
+    - The user can click on a report, and 'Update/Edit' and 'Delete' buttons are now visible under the report text, colored brightly green and red to attract attention. The Update and Delete buttons are shown to the user if the user opent theit own report from Reports page too.
+    - Update and Delete buttons lead the user to their respective pages. If updated, the user is returned to the report being updated, if deleted the user is brought back to 'My Reports' page.
+
+  - *Footer:*
+    - Footer is retained across all pages and contains links to the Control Wiki Fandom, Control Remedy developer site and this project GitHub repository, all opening in separate tabs.
+    - Footer also contains opyright for both this project and intellectual property rights.
+    - Already mentioned 'Launch Content Disclaimer' button for modal is situated the bottom of every page.
 
 ### **Database Design**
 
