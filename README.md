@@ -422,7 +422,167 @@ Unfortunately medical and other issues prevented full use of all this planning. 
 
 ## **Features**
 
-<!-- Features images/gifs -->
+All of the features presented in this sections are fully responsive on all devices and screen widths.
+Please refer to [TESTING.md](/TESTING.md) for more information about responsiveness testing.
+
+### **Intro/splash/index**
+
+ - Content disclaimer firing when opening the page for the first time, not firing on subsequent visit, spinning logo and animated center text
+ <br>
+
+ ![Description](img/gif)
+
+ - Content disclaimer firing when the user clicks on it, link inside the modal opens in a new tab, close modal button
+ <br>
+
+ ![Description](img/gif)
+
+ - Footer links open in a new tab, tooltips present on logo, title and footer links
+ <br>
+
+ ![Description](img/gif)
+
+ - Footer links open in a new tab
+ <br>
+
+### **Home**
+
+ ![Description](img/gif)
+
+ - Unregistered user can open home page, warning modals for reports/create reports
+ <br>
+
+ ![Description](img/gif)
+
+ - Unregistered user warning modal links and close button
+ <br>
+
+ ![Description](img/gif)
+
+ - Home page 'More Info' modals
+ <br>
+
+ ![Description](img/gif)
+
+ - Home page 'More Info' modals
+ <br>
+
+ ![Description](img/gif)
+
+### **Sign Up**
+
+ - Cross-links between Sign-up and Log In
+ <br>
+
+ ![Description](img/gif)
+
+ - Successful registering success message
+ <br>
+
+ ![Description](img/gif)
+
+### **Log In/Out**
+
+ - Successful login success message, Agent name in top right corner
+ <br>
+
+ ![Description](img/gif)
+
+ - GitHub log in
+ <br>
+
+ ![Description](img/gif)
+
+ - Sure you want to log out page, logging out success message, no Agent name in top right corner
+ <br>
+
+ ![Description](img/gif)
+
+### **Reports**
+
+ - Paginated view of reports with like/dislike counters, next/back page button
+ <br>
+
+ ![Description](img/gif)
+
+ - Open an report, like/dislike buttons
+ <br>
+
+ ![Description](img/gif)
+
+ - Adding a comment, comments counter updating, if no comments - message
+ <br>
+
+ ![Description](img/gif)
+
+### **Create Report**
+
+ - Adding a report, template image if no image uploaded, director approval needed message and redirect to My-Reports page, added report not visible on Reports page
+ <br>
+
+ ![Description](img/gif)
+
+### **My Reports**
+
+ - Paginated view of user's reports, unique for each user, Update/Edit and Delete buttons show up for user's own report
+ <br>
+
+ ![Description](img/gif)
+
+ - Update Report and success message
+ <br>
+
+ ![Description](img/gif)
+
+ - Delete Report, 'are you sure' question and success message
+ <br>
+
+ ![Description](img/gif)
+
+### **Admin/Director site differences**
+
+ - Director access extra nav link for admin opening admin page in a separate tab, top right corner changes from Agent: *user* to Director: *user*
+ <br>
+
+ ![Description](img/gif)
+
+ - Reports and Create Report has no warning text for admin
+ <br>
+
+ ![Description](img/gif)
+
+### **Admin page**
+
+ - Admin can approve and publish report, visible on Reports page to a normal user
+ <br>
+
+ ![Description](img/gif)
+
+ - Admin can create a draft report
+ <br>
+
+ ![Description](img/gif)
+
+ - Admin can change a report, censoring perk working
+ <br>
+
+ ![Description](img/gif)
+
+ - Admin can delete a report and user
+ <br>
+
+ ![Description](img/gif)
+
+  - Admin can approve and change a comment
+ <br>
+
+ ![Description](img/gif)
+
+  - Admin can delete a comment
+ <br>
+
+ ![Description](img/gif)
+
 
 [Back to top ⇧](#federal-bureau-of-control)
 
