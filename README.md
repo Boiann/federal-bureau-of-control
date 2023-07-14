@@ -173,13 +173,101 @@ All other images are user-submitted for their own report, first couple of create
     - Footer also contains opyright for both this project and intellectual property rights.
     - Already mentioned 'Launch Content Disclaimer' button for modal is situated the bottom of every page.
 
+  - *Error pages*
+    - Two error pages are supported, 404 (page not found) and 500 (internal server error), both with buttons that guide the user back to the home page.   
+
 ### **Database Design**
 
-<!-- Description and schema -->
- 
+  - Two classes were made for this project; Event and Comment.
+
+The Event class is the main custom class in this project as the function of the site is for the users/Agents to share their reports on paranatural phenomena to the FBC.
+The Comment class is used to represent text that a user creates and attaches to a particular report. Report can have many comments but each comment can only belong to one report/event. Each comment can have only one author, but each user can write many comments on multiple reports.
+
+  - Database Relationships:
+    - User-Event is one-to-many = user can have many Reports but each Report can belong to only one user
+    - Event-Like/Dislike is many-to-many = Report can have have likes/dislikes from many users and user can like/dislike many Reports
+    - Event-Comment is one-to-many = Report can have many comments but each comment can belong to only one Report
+    - Comment-User is one-to-many = user can have many comments but each comment can belong to only one user
+
+  - Database schema:
+
+  - *Event*
+
+| Field Name      | Field Type              | Description                                   |
+| --------------- | ----------------------- | --------------------------------------------- |
+| id              | IntegerField (PK)       | Primary key for the event                     |
+| title           | CharField               | The title of the event                        |
+| slug            | SlugField               | A slugified version of the title for URL purposes |
+| author_id       | ForeignKey (User)       | Foreign key to the User table                  |
+| featured_image  | CloudinaryField         | Cloudinary field for the featured image        |
+| excerpt         | TextField               | Excerpt of the event                           |
+| updated_on      | DateTimeField           | The datetime when the event was last updated   |
+| content         | TextField               | The content of the event                       |
+| created_on      | DateTimeField           | The datetime when the event was created        |
+| approved        | BooleanField            | Indicates whether the event is approved        |
+| status          | IntegerField            | Status of the event (0 for Draft, 1 for Published) |
+| likes           | ManyToManyField (User)  | Users who liked the event                      |
+| dislikes        | ManyToManyField (User)  | Users who disliked the event                   |
+
+  - *Comment*
+
+| Field Name  | Field Type              | Description                                   |
+| ----------- | ----------------------- | --------------------------------------------- |
+| id          | IntegerField (PK)       | Primary key for the comment                    |
+| post_id     | ForeignKey (Event)      | Foreign key to the Event table                 |
+| name        | CharField               | Name of the commenter                          |
+| email       | EmailField              | Email of the commenter                         |
+| body        | TextField               | The comment text                               |
+| created_on  | DateTimeField           | The datetime when the comment was created      |
+| approved    | BooleanField            | Indicates whether the comment is approved      |
+| status      | IntegerField            | Status of the comment (0 for Draft, 1 for Published) |
+
+The provided database schema consists of two tables: Event and Comment. The Event table contains fields: event's unique identifier, title, slug for URL purposes, author reference, featured image, excerpt, content, creation and update timestamps, approval status, and a status indicator. Additionally, there are many-to-many fields for users who liked or disliked the event. The Comment table includes fields like the comment's ID, associated event, commenter's name and email, comment body, creation timestamp, approval status, and a status indicator. This schema enables the storage and organization of events with their respective comments, providing a structured and efficient way to manage and retrieve event-related data.
+
 ### **Wireframes**
 
-<!-- Description and images -->
+Wireframes for the project were developed right after the idea for the project was chosen.
+Wireframes for Assessment Guide and Project Planning & Ux were made before the ones for the content of the pages themselves.
+<!-- ADD IMG -->
+<details>
+<summary>Assessment guide wireframe</summary>
+
+![Assessment guide wireframe](img-link)
+</details>
+<!-- ADD IMG -->
+<details>
+<summary>Project planning wireframe</summary>
+
+![Project planning wireframe](img-link)
+</details>
+
+There are three wireframes for the project. Using Agile, the basic or Minimal Viable Product (MVP) was to be made first, then if time allows it the scope can increase, making the project grow towards Enhanced and finally Superior project.
+
+Differences between scopes were considered early as to allow for the use of Agile methodology. Personal, work, family, dependants and health situations were considered to have impact on time available for the project. Ideally, maximum time was to be taken to finish the project making the scope bigger.
+<!-- ADD IMG -->
+<details>
+<summary>MVP wireframe</summary>
+
+![MVP wireframe](img-link)
+</details>
+<!-- ADD IMG -->
+<details>
+<summary>Mobile wireframe</summary>
+
+![Mobile wireframe](img-link)
+</details>
+<!-- ADD IMG -->
+<details>
+<summary>Enhanced wireframe</summary>
+
+![Enhanced wireframe](img-link)
+</details>
+<!-- ADD IMG -->
+<details>
+<summary>Superior wireframe</summary>
+
+![Superior wireframe](img-link)
+</details>
 
 [Back to top ⇧](#federal-bureau-of-control)
 
