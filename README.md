@@ -275,6 +275,147 @@ Differences between scopes were considered early as to allow for the use of Agil
 
 ## **Agile Project Management**
 
+This project was developed using the Agile methodology.
+The key principles adopted were; focus on the essential features first, work in small iterations and add extra features/expand scope as time permitted.
+GitHub's kanban board was used for organization of milestones, epics, issues, labels, and project features.
+
+- [FBC Project Board](https://github.com/users/Boiann/projects/11/views/6)
+
+The project was divided into 5 Milestones : MVP, Enhanced Project, Superior Project, Backlog and Submission Prep.
+Backlog milestone was used to place all the issues not finished in previous iteration into it.
+
+- [FBC Milestones](https://github.com/Boiann/federal-bureau-of-control/milestones)
+
+The structure of development was: Milestone => Epic => Task/User Story.
+Epics were considered as iterations, and all of them contained 5 issues. Using the MoSCoW prioritization technique, they were separated into 60% as Must Have, 20% Should Have and 20% Could Have.
+
+Three templates were used to create the respective Epic, Task and User Story:
+  - [EPIC](https://github.com/Boiann/federal-bureau-of-control/issues/new?assignees=&labels=&projects=&template=epic.md&title=EPIC%3A+TITLE)
+  - [TASK](https://github.com/Boiann/federal-bureau-of-control/issues/new?assignees=&labels=&projects=&template=task.md&title=TASK%3A+TITLE)
+  - [USER STORY](https://github.com/Boiann/federal-bureau-of-control/issues/new?assignees=&labels=&projects=&template=user-story.md&title=USER+STORY%3A+TITLE)
+
+Colored text was used when possible (using Tex) for organizing, color-coding and visual distinction.
+
+**Agile Planning**
+
+Before writing any code, everything was considered and planned as much as possible.
+
+<details>
+<summary>Timeboxing - GLOBAL</summary>
+As this is a project being developed with agile methodology, the following calculations are not set in stone, and there is a lot of flexibility calculated in the final numbers. I've decided to do the calculations to mainly help myself, to put the available time in perspective regarding the development.
+Things can change and there can always be an event or something might happen ( when developing my PP3 the PC's PSU died and that set me back a week ).
+This is why it makes it easier for me if I have these calculations beforehand and can adjust accordingly.
+
+
+PP4 Due 03.07.2023 12:00
+
+Project needs to be ready ideally a week before to account for:
+								- possible issues with internet connection  
+								- issues with development environment
+								- any other act of "divine power"
+
+= CALCULATION =
+
+PP4 Due 26.06.2023
+
+Project start date: 17.04.2023
+
+Available weeks for development: 10
+
+Days off per week: 3
+
+Account for springtime chores and tasks (outside work, mowing, repairs etc) : two 1/2 days per week (get up early and work on project for half a day),
+or one full day
+
+On days that working in the store: 2 hrs/day
+
+
+= CALCULATION = 
+
+Full days available per week: 2 (12hrs/day ideally, 10 more likely) = 20 hrs
+When working in store = 4 days = 8 hrs
+
+
+= FINAL PREDICTION =
+
+Can invest about 28 hrs/week = round up to 30
+
+
+IDEAL TOTAL HRS FOR PROJECT DEVELOPMENT = 30 hrs x 10 weeks === 300 Hrs
+
+
+The actual number will probably be lower accounting for out of my control situations,
+
+FINAL TOTAL === 250 hrs.
+            === 25 hrs/week
+</details>
+
+<details>
+<summary>Timeboxing Milestones-Epics</summary>
+Epic = weekly timebox (2 days off from work, could be split in two - Epic/day)Prepare th
+
+Weeks Available = 10
+
+1. Milestone - MVP = 5 weeks timebox
+
+1. EPIC - Django Setup and early deployment
+2. EPIC - Set up models and views
+3. EPIC - User registration/login, CRUD
+4. EPIC - Content and navigation - basic
+5. EPIC - Content and navigation beautify/Testing
+
+2. Milestone - Enhanced Project = 2 weeks timebox
+
+6. EPIC - Logic/functionality enhancements
+7. EPIC - Ux/content enhancements
+
+3. Milestone - Superior Project = 2 weeks timebox
+
+8. EPIC - Logic/functionality enhancements
+9. EPIC - Ux/content enhancements
+
+4. Milestone - README = 1 week timebox
+
+10. EPIC - README update and finish up
+</details>
+
+<details>
+<summary>Timeboxing - ITERATION</summary> 
+Similar to Time calculations - GLOBAL, these calculations are not set in stone (they're agile!) but serve as a guide/organizing tool for myself.
+
+
+- Task to be finished in a day preferably
+- Include revisions
+- Timeboxing - goal oriented, iteration/meeting/milestone level
+- MoSCoW technique = Must, Should, Could, Won't HAVE in each iteration/milestone
+- Must have - 60%, should have 20%, could have 20%, add labels for each
+
+
+= ITERATION TIMEBOXING = 
+
+- Iteration being on a daily basis for days off ( 10 hrs/day ) 
+- The day before, preferably prepare the next day's iteration plan using Projects Board/Issues and do a revision of work done
+- The rest of the days when working in store - deal with bugs/problems/plan ahead
+
+
+= EPIC/MILESTONE TIMEBOXING = 
+
+- Epic/Milestone should be on a weekly basis ( approx 25 hrs )
+- The day before, preferably prepare the next week's milestone plan using Projects Board/Issues and do a revision of work done
+</details>
+<!-- ADD IMAGE -->
+<details>
+<summary>FBC Timeboxing/Project Flow Image</summary>
+
+![FBC Timeboxing/Project Flow Image](img-link)
+</details>
+
+---
+
+Unfortunately medical and other issues prevented full use of all this planning. After a lenghty hiatus from working on the project, the MVP epics/tasks/user stories were placed in BACKLOG Milestone to signify this. Work on the project continued from there. After talking to a mentor, it was decided not to close unfinished epics/tasks/user stories. The explanation was that this is what happens in real-life development too (unfinished things), and FBC Project Board reflects that.
+
+---
+
 [Back to top ⇧](#federal-bureau-of-control)
 
 ---
