@@ -6,6 +6,9 @@
 
 <div class="container-fluid">
     <h1 style="text-align: center;">Reports Archive</h1>
+    {% if user.is_superuser %}
+    <p></p>
+    {% else %}
     <p class="center-text">Here you can view reports of AWE, AI or OoP, Agent. You can also add your own comment and
         approve/disprove reports.
         <br>
@@ -13,6 +16,7 @@
         in the comment removal and possibly a disciplinary action in response to Agent's
         misconduct and/or rule violation.
     </p>
+    {% endif %}
     <div class="row gx-2 gx-lg-6">
         {% for event in event_list %}
         <div class="col-lg-4 mb-5 adjusted-cols">
@@ -22,20 +26,21 @@
                         {% if "placeholder" in event.featured_image.url %}
                         <!-- Display placeholder image -->
                         <img class="card-img-top"
-                            src="https://res.cloudinary.com/boiann/image/upload/v1688458922/fbc-seal-color_ppeq9n.png" alt="FBC logo image">
+                            src="https://res.cloudinary.com/boiann/image/upload/v1688458922/fbc-seal-color_ppeq9n.png"
+                            alt="FBC logo image">
                         {% else %}
                         <!-- Display user submitted image -->
                         <img class="card-img-top" src="{{ event.featured_image.url }}" alt="user submitted image">
                         {% endif %}
                         <p class="author">Author: {{ event.author }}</p>
                     </div>
-                    <a href="{% url 'event_detail' event.slug  %}" class="post-link" aria-label="Read more about {{ event.title }}">
+                    <a href="{% url 'event_detail' event.slug  %}" class="post-link"
+                        aria-label="Read more about {{ event.title }}">
                         <h2 class="card-title">{{ event.title }}</h2>
                         <p class="card-text">{{ event.excerpt }}</p>
                     </a>
                     <hr>
-                    <p class="card-text h6">{{ event.created_on}} &nbsp; <i
-                            class="fa-solid fa-user-check"></i>
+                    <p class="card-text h6">{{ event.created_on}} &nbsp; <i class="fa-solid fa-user-check"></i>
                         {{ event.number_of_likes }} &nbsp; <i class="fa-solid fa-user-xmark"></i>
                         {{ event.number_of_dislikes }}</p>
                 </div>
@@ -55,11 +60,13 @@
     <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
         <!-- Display previous page link -->
-        <li><a href="?page={{ page_obj.previous_page_number }}" class="btn btn-dark btn-sm" aria-label="Previous page">&laquo; PREV</a></li>
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="btn btn-dark btn-sm"
+                aria-label="Previous page">&laquo; PREV</a></li>
         {% endif %}
         {% if page_obj.has_next %}
         <!-- Display next page link -->
-        <li><a href="?page={{ page_obj.next_page_number }}" class="btn btn-dark btn-sm" aria-label="Next page">NEXT &raquo;</a></li>
+        <li><a href="?page={{ page_obj.next_page_number }}" class="btn btn-dark btn-sm" aria-label="Next page">NEXT
+                &raquo;</a></li>
         {% endif %}
     </ul>
 </nav>
