@@ -160,7 +160,7 @@ All other images are user-submitted for their own report, first couple of create
     - Each report card consists of image, title, author, time of submission, and approval/denial counters.
     - If the user clicks on a report, the main text is presented, along image, title, author, time of submission, and approval/denial counters.
     - The approve/deny buttons (thumbs up and down) are clickable and interactive, change if the user clicks them.
-    - The user can add comment to the report with success message after submission, there is no admin approval for comments.
+    - The user can add comment to the report with success message after submission, there is no admin approval for comments. This was advised by project mentor, having comments without approval will ease things with project assessment but still work as intended.
     - The user can see other people's comments .
 
   - *My Reports page:*
@@ -467,11 +467,6 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 
  ![Description](img/gif)
 
- - Home page 'More Info' modals
- <br>
-
- ![Description](img/gif)
- 
 ### **Sign Up**
 
  - Cross-links between Sign-up and Log In
@@ -607,7 +602,7 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 
 The following features could be added to FBD in the future. Project deadline influenced heavily what was left out.
 
-  - Fix naming of the classes vs pages, for example the event class is used to produce Report. The event class was conceived early in the project and left as is rather than to risk breaking the code somewhere.
+  - Fix naming of the classes vs pages, for example the event class is used to produce Report. The event class was conceived early in the project and left as is rather than to risk breaking the code somewhere, rendering the project submission in danger.
   - After user submits a comment, the success message is rendered at the top of the page, it would be a better UX if the user is left where the comment was entered.
   - Ability for the user to modify/delete their comments
   - Adding a event/report type selector for the user, so when the user is submitting a report there is a choice of what type of event/report it is (AWE, AI, OoP)
@@ -854,7 +849,7 @@ Testing information can be found in a separate testing file [TESTING.md](/TESTIN
 
  - Previous projects of the developer were used, [Boudoir Studio](https://boiann.github.io/boudoir-studio/index.html) ( GithHub repository [here](https://github.com/Boiann/boudoir-studio) ), [Budget Calculator](https://boiann.github.io/budget-calculator/) ( GithHub repository [here](https://github.com/Boiann/budget-calculator) ) and [Space Quiz](https://space-quiz.herokuapp.com/) ( GithHub repository [here](https://github.com/Boiann/space-quiz) ) as a source for looking up the code/solutions for CSS and README purposes mainly.
 
- - [Federal Bureau of Control / Records Archive System](https://control-records.netlify.app/document/593134886/ai80-ue-movie-camera-supplement) was used as a project inspiration and as a source of Reports entries text, as well as censoring text inspiration. Code was used with blessing of the FBC Archive System author, [Lou Huang](https://louhuang.com/), whose permission was asked for through email.
+ - [Federal Bureau of Control / Records Archive System](https://control-records.netlify.app/document/593134886/ai80-ue-movie-camera-supplement) was used as a project inspiration and as a source of Reports entries text, as well as censoring text inspiration. Code (text for generating example reports) was used with blessing of the FBC Archive System author, [Lou Huang](https://louhuang.com/), whose permission was asked for through email.
 
  - All characters, events and situations depicted (except for user self-made entries) are products of and copyrighted by [Remedy Entertainment Plc](https://www.remedygames.com/).
 
@@ -912,6 +907,7 @@ Without support I got from other people, this project would never be realized. I
 - Slack community, thank you for being a constant source of good information and solutions.
 Special mentions are Allen and Roman, whose attention to detail and suggestions made this project better after it was submitted for peer review.
 - Koko, my mentor, thank you for being an incredible source of solutions and good advice, your support meant a great deal during the project.
+- Student support of Code Institute, thank you for granting the project deadline extension, it was much needed and appreciated.
 - C8H10N4O2 in a cup. Thank you for existing.
 
 [Back to top ⇧](#federal-bureau-of-control)
