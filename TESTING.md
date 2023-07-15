@@ -337,6 +337,8 @@ The website still works well on a device 280px wide, with visible difficulties w
 
 There were many 'small' bugs the author had to deal with during the development of the project. Most of them were squashed by doing a quick [Google](https://google.com/ "Google home page") search and using [Stack Overflow](https://stackoverflow.com/ "Stack Overflow home page") to find relevant solutions.
 
+There was an issue with email and email verification. When working on the project and debug was set to true, after email submission the verification message was sent inside terminal. This was looked into and it was found that it is normal to email verification to go through terminal when debug is true. It was assumed this is working normally. Only later in the development cycle when debug was set to false, it was discovered that the email verification and password reset doesn't work. Again because of fast approaching project submission date, the email and email input field was left out entirely.
+
 Issues with database were the scariest and for the sake of project stability and to be able to submit the project on time, this was left as is. It does not hinder the site operation in any way. The solutions were looked for and most of them end with rebuilding the database, creating new tables and moving the data around, for example on [this page](https://www.pythonsolver.com/pythonerrors/how-to-fix-the-python-integrityerror-error/).
 
 - Detailed description:

@@ -611,6 +611,7 @@ The following features could be added to FBD in the future. Project deadline inf
   - Add email required, working email verification and password recovery
   - More social sign-in options
   - GitHub sign in button on Register page
+  - Clean up of style.css. The css file is very big, consisting of more than 10 000 lines of code (not minified). The solution was looked for ([PurgeCSS](https://medium.com/dwarves-foundation/remove-unused-css-styles-from-bootstrap-using-purgecss-88395a2c5772)) and tried but was not successful within the project submission timeframe.
 
 These were only some of project enhancements that could be done. Using other Django apps and other API-s, logic and creativity could make this project into something really wonderful.
 
