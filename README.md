@@ -852,9 +852,67 @@ Testing information can be found in a separate testing file [TESTING.md](/TESTIN
 
 ### **Code used and adapted**
 
+ - Previous projects of the developer were used, [Boudoir Studio](https://boiann.github.io/boudoir-studio/index.html) ( GithHub repository [here](https://github.com/Boiann/boudoir-studio) ), [Budget Calculator](https://boiann.github.io/budget-calculator/) ( GithHub repository [here](https://github.com/Boiann/budget-calculator) ) and [Space Quiz](https://space-quiz.herokuapp.com/) ( GithHub repository [here](https://github.com/Boiann/space-quiz) ) as a source for looking up the code/solutions for CSS and README purposes mainly.
+
+ - [Federal Bureau of Control / Records Archive System](https://control-records.netlify.app/document/593134886/ai80-ue-movie-camera-supplement) was used as a project inspiration and as a source of Reports entries text, as well as censoring text inspiration. Code was used with blessing of the FBC Archive System author, [Lou Huang](https://louhuang.com/), whose permission was asked for through email.
+
+ - All characters, events and situations depicted (except for user self-made entries) are products of and copyrighted by [Remedy Entertainment Plc](https://www.remedygames.com/).
+
+ - All images and text for describing AWE's, AI's and OoP's were sourced from [Control Wiki](https://control.fandom.com/wiki/Control_Wiki).
+
+ - Code Institute guide/lessons were heavily relied on while working on development, mainly for the back-end. After the back end was developed the front end was adjusted.
+
+ - [Django documentation](https://docs.djangoproject.com/en/4.2/) was relied on to find code for back-end solutions and code.
+
+ - [Bootstrap documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/) was relied on to find code for front-end solutions and code. 
+
+ - How do create url to django Admin within user page (HTML), code found on [Stack Overflow](https://stackoverflow.com/questions/55917136/how-do-create-url-to-django-admin-within-my-user-page-html).
+
+ - Error pages how-to, found [here](https://frontendshape.com/post/bootstrap-5-404-page-examples) and [here](https://studygyaan.com/django/how-to-use-custom-500-error-template-in-django).
+
+ - How to force refresh of the entire local storage, found on [Stack Overflow](https://stackoverflow.com/questions/75389242/how-can-i-force-refresh-of-the-entire-local-storage).
+
+ - Adding Social Authentication to Django, found [here](https://testdriven.io/blog/django-social-auth/).
+
+ - Changing Text Animation CSS, found on [CodePen](https://codepen.io/codingyaar/pen/LYJQaBe).
+
+ - Censor Bars Text Animation For Del Text, found [here](https://codemyui.com/censor-bars-%E2%96%88%E2%96%88%E2%96%88%E2%96%88-text-animation-for-del-text/).
+
+ - CSS 3D Rotate Animation, found on [CodePen](https://codepen.io/sungaila/pen/LzMgjE).
+
+ - How to trigger bootstrap modal just once, found on [Stack Overflow](https://stackoverflow.com/questions/60539856/how-to-trigger-bootstrap-modal-just-once-and-using-browser-localstorage-to-detec).
+
+ - Bootstrap templates used, [Clean Blog](https://startbootstrap.com/theme/clean-blog), [The Big Picture](https://startbootstrap.com/template/the-big-picture) and [Small Business](https://startbootstrap.com/template/small-business).
+
 ### **Websites visited for info and solutions**
 
+There were many sites visited during the duration of the project.
+[Google](https://google.com/ "Google home page") was used to produce results of the specific query, and [Stack Overflow](https://stackoverflow.com/ "Stack Overflow home page") proved to be the best source of information for various queries/issues. 
+
+Standouts are [Django documentation](https://docs.djangoproject.com/en/4.2/), [Bootstrap documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/) and [Django-blog](https://djangocentral.com/building-a-blog-application-with-django/) that helped immensely.
+
+A lot of other projects were looked into to help with development, standouts are [Bawarchi Khana](https://github.com/eleanorbucke21/PP4), [BookShelf](https://github.com/Code-Institute-Submissions/ci-project-21), [Just-beats](https://github.com/johnrearden/just-beats), [Italianissimo](https://github.com/useriasminna/italianissimo-booking-website) and [Support Hub](https://github.com/ianmeigh/support-hub).
+
+
+
 ###  **Acknowledgments**
+
+This whole project is dedicated to my passion of otherworldly and strange events and unexplainable things. The conflict between science based approach to life and the possibility of events/things we humans cannot yet comprehend will always be present. 
+
+Special thanks to the developers of Control game, it was a wild and strange experience playing Control (back when I had spare time!).
+
+Without support I got from other people, this project would never be realized. I'll try and remember to thank everyone and everything I can!
+
+- M., my wife, thank you for your support and cheering me on, lifting me back up when it got hard. Thank you for taking care of all the housework and food, children and numerous other responsibilities while I was busy with full time job and doing this project on the side. Without you this journey would never be possible. And when it got hard and complicated, you never gave up on me and this dream of career change.
+- A., G. and V., my three beautiful girls. Thank you for being so understanding during the project work. Thank you from the bottom of my heart for being who you are, wonderful and delightful souls. You make me proud to be your dad.
+- Boris, my brother, thank you for testing my project so thoroughly, and for your support.
+- Marija and Boris, my mother and father, thank you for making me feel like a superstar when I announced I'm starting this journey and your support throughout it.
+- John, my friend, thank you for starting me on this path, and for your support, chats and sharing the things you learned.
+- Helen from Code Institute, thank you believing in me and making this change possible.
+- Slack community, thank you for being a constant source of good information and solutions.
+Special mentions are Allen and Roman, whose attention to detail and suggestions made this project better after it was submitted for peer review.
+- Koko, my mentor, thank you for being an incredible source of solutions and good advice, your support meant a great deal during the project.
+- C8H10N4O2 in a cup. Thank you for existing.
 
 [Back to top ⇧](#federal-bureau-of-control)
 
