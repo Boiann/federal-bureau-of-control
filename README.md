@@ -7,7 +7,7 @@ FEDERAL BUREAU OF CONTROL is a Project 4 for Code Institute Full-stack developme
 
 <!--Am I Responsive image -->
 
-Visit the live site [Here.](https://federal-bureau-of-control.herokuapp.com/ "Link to Federal Bureau pf Control")
+Visit the live site [Here.](https://federal-bureau-of-control.herokuapp.com/ "Link to Federal Bureau of Control")
 
 ---
 
@@ -50,12 +50,12 @@ Visit the live site [Here.](https://federal-bureau-of-control.herokuapp.com/ "Li
 
 ## **Project Overview**
 
-The idea for the project was concieved when brainstorming about what can be made that is like a blog, but not an actual blog. After finding the inspiration in FBC, the wireframes and flowcharts were developed, keeping Agile methodology in mind.
+The idea for the project was conceived when brainstorming about what can be made that is like a blog, but not an actual blog. After finding the inspiration in FBC, the wireframes and flowcharts were developed, keeping Agile methodology in mind.
 Using mainly Django, a Python back-end development framework and Bootstrap, front-end (CSS) framework, this project was brought to life.
 The idea was to develop a website representing secretive fictional government. This meant there is little to none of the kind expressions (please, thank you) and the instructions/messages for the user are serious and to the point (warning modals). This does not take away from ux in general, everything is made to run smoothly and without errors with intuitive website navigation.
-The admin (Director) has the power to view, approve/deny, delete and modify user reports and comments (CRUD). Additionaly. the admin can censor any text from the Django admin page.
+The admin (Director) has the power to view, approve/deny, delete and modify user reports and comments (CRUD). Additionally, the admin can censor any text from the Django admin page.
 The user can add/modify/delete and view their own report of strange/unusual/paranatural event (CRUD), submit comments to any report and approve or deny reports (like/dislike). The user is taking on a role of an Agent of the FBC while registered/logged in on the website, and the admin is the Director. 
-Adding all of these things together (and much more) will hopefuly give any user an rewarding and exciting experience, letting them immerse themselves in Control fiction.
+Adding all of these things together (and much more) will hopefully give any user an rewarding and exciting experience, letting them immerse themselves in Control fiction.
 
 ---
 
@@ -142,7 +142,7 @@ All other images are user-submitted for their own report, first couple of create
     - User can open home page with more detailed info about the FBC and various phenomena. Each phenomenon has a card with short description, and a button that fires a modal allowing for more detail on each phenomenon type.
     - User can come back to the intro/splash page by clicking on the FBC logo or title text with handy tooltips explaining this. 
 
-  - *Registernig, logging in/out:*  
+  - *Registerig, logging in/out:*  
     - First time/unregistered user may click on 'Reports' and 'Create Report' nav links but will be met with 'ACCESS RESTRICTED TO AUTHORIZED AGENTS ONLY' modal message. The modal itself contains links to register/login pages.
     - First time user can register on the register page. The page contains redirect links to login if the user is mistakenly on register page, and link to login page if the user wishes to use GitHub authorisation to access site.
     - If using GitHub auth, the user is brought to the 'Log in via Github' page where the user can continue with GitHub authorization.
@@ -165,12 +165,12 @@ All other images are user-submitted for their own report, first couple of create
 
   - *My Reports page:*
     - This page contains user's submitted reports, even if they are not published/approved.
-    - The user can click on a report, and 'Update/Edit' and 'Delete' buttons are now visible under the report text, colored brightly green and red to attract attention. The Update and Delete buttons are shown to the user if the user opent theit own report from Reports page too.
+    - The user can click on a report, and 'Update/Edit' and 'Delete' buttons are now visible under the report text, colored brightly green and red to attract attention. The Update and Delete buttons are shown to the user if the user opens their own report from Reports page too.
     - Update and Delete buttons lead the user to their respective pages. If updated, the user is returned to the report being updated, if deleted the user is brought back to 'My Reports' page.
 
   - *Footer:*
     - Footer is retained across all pages and contains links to the Control Wiki Fandom, Control Remedy developer site and this project GitHub repository, all opening in separate tabs.
-    - Footer also contains opyright for both this project and intellectual property rights.
+    - Footer also contains copyright for both this project and intellectual property rights.
     - Already mentioned 'Launch Content Disclaimer' button for modal is situated the bottom of every page.
 
   - *Error pages*
@@ -415,7 +415,7 @@ Similar to Time calculations - GLOBAL, these calculations are not set in stone (
 
 ---
 
-Unfortunately medical and other issues prevented full use of all this planning. After a lenghty hiatus from working on the project, the MVP epics/tasks/user stories were placed in BACKLOG Milestone to signify this. Work on the project continued from there. After talking to a mentor, it was decided not to close unfinished epics/tasks/user stories. The explanation was that this is what happens in real-life development too (unfinished things), and FBC Project Board reflects that.
+Unfortunately medical and other issues prevented full use of all this planning. After a lengthy hiatus from working on the project, the MVP epics/tasks/user stories were placed in BACKLOG Milestone to signify this. Work on the project continued from there. After talking to a mentor, it was decided not to close unfinished epics/tasks/user stories. The explanation was that this is what happens in real-life development too (unfinished things), and FBC Project Board reflects that.
 
 ---
 
@@ -471,7 +471,7 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
  <br>
 
  ![Description](img/gif)
-
+ 
 ### **Sign Up**
 
  - Cross-links between Sign-up and Log In
@@ -607,7 +607,7 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 
 The following features could be added to FBD in the future. Project deadline influenced heavily what was left out.
 
-  - Fix naming of the classes vs pages, for example the event class is used to produce Report. The event class was concieved early in the project and left as is rather than to risk breaking the code somewhere.
+  - Fix naming of the classes vs pages, for example the event class is used to produce Report. The event class was conceived early in the project and left as is rather than to risk breaking the code somewhere.
   - After user submits a comment, the success message is rendered at the top of the page, it would be a better UX if the user is left where the comment was entered.
   - Ability for the user to modify/delete their comments
   - Adding a event/report type selector for the user, so when the user is submitting a report there is a choice of what type of event/report it is (AWE, AI, OoP)
@@ -617,7 +617,7 @@ The following features could be added to FBD in the future. Project deadline inf
   - More social sign-in options
   - GitHub sign in button on Register page
 
-These were only some of project enhancements that could be done. Using other Django apps and other API-s, logic and creativity could make this project into something really wonderfull.
+These were only some of project enhancements that could be done. Using other Django apps and other API-s, logic and creativity could make this project into something really wonderful.
 
 [Back to top ⇧](#federal-bureau-of-control)
 
@@ -655,7 +655,7 @@ These were only some of project enhancements that could be done. Using other Dja
 - [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker) - Used to make the iteration flowchart for the project.
 - [Bootstrap clean blog](https://startbootstrap.com/theme/clean-blog) - Bootstrap blog template imported in for content management and CSS.
 - [ElephantSQL](https://www.elephantsql.com/) - Free and open-source relational database management system (RDBMS).
-- [Bootstrap5](https://getbootstrap.com/) - Used for adding predifined styled elements and creating responsiveness.
+- [Bootstrap5](https://getbootstrap.com/) - Used for adding predefined styled elements and creating responsiveness.
 - [JsHint](https://jshint.com/) - Used for validating the javascript code.
 - [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used for validating the python code.
 - [HTML W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) - Used for validating the HTML.
@@ -671,7 +671,7 @@ These were only some of project enhancements that could be done. Using other Dja
 ## **Deployment**
 
 - Clone Code Institute Template Repository
-- Initialize GitPod Workspace by clicking on the GitPod button on the respository
+- Initialize GitPod Workspace by clicking on the GitPod button on the repository
 - Install support libraries and Django according to the guide on Code Institute
 - Create requirements.txt
 - Create Django project
