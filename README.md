@@ -296,6 +296,9 @@ Three templates were used to create the respective Epic, Task and User Story:
 
 Colored text was used when possible (using Tex) for organizing, color-coding and visual distinction.
 
+**Version Control**
+Git branching/squashing and merging was used in this project. When work was to be done a separate branch was made. The strategy was to have each branch dedicated to one feature/fix/issue or epic/iteration. After the work was completed on a particular branch, the branch would be squashed and merged to the main branch. The squashed branches are then usually deleted, but they are left as is in this project to demonstrate development.
+
 **Agile Planning**
 
 Before writing any code, everything was considered and planned as much as possible.
@@ -586,11 +589,35 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 
 [Back to top ⇧](#federal-bureau-of-control)
 
+### **Error pages**
+
+  - Error 400 (page not found) page with 'Go Home' button
+ <br>
+
+ ![Description](img/gif)
+
+   - Error 500 (internal server error) page with 'Go Home' button
+ <br>
+
+ ![Description](img/gif)
+
 ---
 
 ## **Future Implementations**
 
-<!-- Description -->
+The following features could be added to FBD in the future. Project deadline influenced heavily what was left out.
+
+  - Fix naming of the classes vs pages, for example the event class is used to produce Report. The event class was concieved early in the project and left as is rather than to risk breaking the code somewhere.
+  - After user submits a comment, the success message is rendered at the top of the page, it would be a better UX if the user is left where the comment was entered.
+  - Ability for the user to modify/delete their comments
+  - Adding a event/report type selector for the user, so when the user is submitting a report there is a choice of what type of event/report it is (AWE, AI, OoP)
+  - Make dedicated page with image carousel for each type of report (AWE, AI, OoP)
+  - Use some kind of text censoring API, to make censoring of the reports automated
+  - Add email required, working email verification and password recovery
+  - More social sign-in options
+  - GitHub sign in button on Register page
+
+These were only some of project enhancements that could be done. Using other Django apps and other API-s, logic and creativity could make this project into something really wonderfull.
 
 [Back to top ⇧](#federal-bureau-of-control)
 
@@ -600,13 +627,214 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 
 ### **Languages Used**
 
-### **Programs Used**
+- [HTML](https://en.wikipedia.org/wiki/HTML5) - For adding content and formatting.
+- [CSS](https://en.wikipedia.org/wiki/CSS) - For adding style and colours.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - For adding interactive features.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - High-level, general-purpose programming language.
+
+### **Django and Python Packages**
+
+- [Django](https://www.djangoproject.com/) - A Python-based web framework that follows the model-template-view architectural pattern, used for building the project.
+- [django-allauth](https://django-allauth.readthedocs.io/) - A Django application used for account registration, management, and authentication.
+- [cloudinary_storage](https://cloudinary.com/) - A Django storage backend for Cloudinary, used for image hosting and storage.
+- [django_summernote](https://django-summernote.readthedocs.io/) - A Django application that integrates the Summernote WYSIWYG editor into Django projects.
+- [crispy_forms](https://django-crispy-forms.readthedocs.io/) - A Django application that makes it easy to style Django forms.
+- [crispy_bootstrap5](https://pypi.org/project/crispy-bootstrap5/) - A package that provides Bootstrap 5 styling for Django crispy-forms.
+
+### **Programs/Tools Used**
+
+- [GitHub](https://github.com/) - Source code hosted on GitHub, deployed using Git Pages.
+- [GitPod](https://www.gitpod.io/) - Used to commit, comment and push code during the development process.
+- [Font Awesome](https://fontawesome.com/) - Font Awesome use dto source necessary icons used in the project.
+- [Balsamiq](https://balsamiq.com/) - Used to create wireframes and website structure map for the project.
+- [Google Keep](https://keep.google.com/) - Used to make notes during the project duration.
+- [LanguageTool](https://languagetool.org/) - Used for general spell-check.
+- [Google Fonts](https://fonts.google.com/) - Used to import fonts to the project.
+- [GifCap](https://gifcap.dev/) - Used to capture gif-s of the project .
+- [Heroku](https://www.heroku.com/) - Used to deploy the project.
+- [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker) - Used to make the iteration flowchart for the project.
+- [Bootstrap clean blog](https://startbootstrap.com/theme/clean-blog) - Bootstrap blog template imported in for content management and CSS.
+- [ElephantSQL](https://www.elephantsql.com/) - Free and open-source relational database management system (RDBMS).
+- [Bootstrap5](https://getbootstrap.com/) - Used for adding predifined styled elements and creating responsiveness.
+- [JsHint](https://jshint.com/) - Used for validating the javascript code.
+- [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used for validating the python code.
+- [HTML W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) - Used for validating the HTML.
+- [CSS Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) - Used for validating the CSS.
+- [Chrome Del Tools](https://developer.chrome.com/docs/devtools/) - For debugging the project.
+- [W.A.V.E.](https://wave.webaim.org/) - Used for testing accessibility.
+- [LightHouse](https://developer.chrome.com/docs/lighthouse/overview/) - Used for testing performance.
 
 [Back to top ⇧](#federal-bureau-of-control)
 
 ---
 
 ## **Deployment**
+
+- Clone Code Institute Template Repository
+- Initialize GitPod Workspace by clicking on the GitPod button on the respository
+- Install support libraries and Django according to the guide on Code Institute
+- Create requirements.txt
+- Create Django project
+- Set up ElephantSQL Account
+- Set up Cloudinary Account
+- Create env.py to hold sensitive data
+- Create Heroku app
+- For the final deployment, the debug setting in settings.py must be set to false
+- Before final deployment, the DISABLE_COLLECTSTATIC config var in Heroku was removed
+- From Heroku connect to github repository 
+- Deploy from selected GitHub branch
+- Click on Deploy button => project is now deployed.
+
+An early deployment guide was made before project start to ensure success in creating the project:
+<details>
+<summary>Early deployment guide</summary>
+
+---
+
+Create repo as usual, from template
+
+Create user stories/issues - LOOK UP PREVIOUS GUIDE ABOUT PROJECTS/about milestones etc
+
+GITPOD
+
+IF ERROR BUILDING IMAGE - REFRESH PAGE
+- pip3 install 'django<4' gunicorn
+- pip3 install dj_database_url==0.5.0 psycopg2
+- pip3 install dj3-cloudinary-storage
+- pip3 freeze --local > requirements.txt
+
+=====  DONT FORGET THE FULL STOP  ====
+
+<django-admin startproject PROJ_NAME .>   
+
+
+python3 manage.py startapp APP_NAME
+
+=== in settings.py, to INSTALLED_APPS array, add APP_NAME
+
+python3 manage.py migrate
+
+python3 manage.py runserver  ===> for TESTING, should see django install congrats
+
+DO NOT COMMIT
+
+HIDING SECRET KEY
+- Create File => .env
+- Cut this from settings.py =>
+- SECRET_KEY = '-----your secret key-----'
+- Paste in .env
+- Write this in settings.py =>
+- from decouple import config
+- SECRET_KEY = config("SECRET_KEY")
+- Write this in terminal or cmd =>
+- pip install python-decouple
+
+FOLLOW HEROKU INSTRUCTIONS
+
+FOLLOW ESQL INSTRUCTIONS
+
+in env.py 
+- import os
+- os.environ["DATABASE_URL"]="<copiedURL>"     === url from ESQL
+- os.environ["SECRET_KEY"]="my_super^secret@key"    === Django Secret key
+
+in settings.py
+- import os
+- import dj_database_url
+- if os.path.isfile('env.py'):
+- import env
+
+replace Django secret with === SECRET_KEY = os.environ.get('SECRET_KEY')
+
+replace this:
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+  }
+}
+```
+with this:
+```
+ DATABASES = {
+     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+ }
+```
+
+!!! IMPORTANT  -  CTRL+S everything
+
+python manage.py migrate
+
+CONNECTION CHECK ON ESQL
+
+Add, commit, push
+RE CHECK python3 manage.py runserver
+
+Add secret key and secret database to heroku config vars, key=PORT value=8000
+
+Cloudinary
+- in env.py do 
+- os.environ["CLOUDINARY_URL"] = 'API_KEY_HERE'
+- add it to Heroku config vars
+- add to Heroku config vars:
+- key=DISABLE_COLLECTSTATIC    value=1
+
+
+to INSTALLED_APPS in settings.py add:
+```
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'cloudinary_storage',
+    'django.contrib.staticfiles',
+    'cloudinary',
+    'blog',
+```
+
+below STATIC_URL = '/static/'  add
+- STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+- STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+- STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+- MEDIA_URL = '/media/'
+- DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+below BASE_DIR = Path(__file__).resolve().parent.parent add
+- TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
+update to this:
+```
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [TEMPLATES_DIR],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+```
+
+update ALLOWED_HOSTS = ['<APP NAME>.herokuapp.com', 'localhost']
+
+CREATE FOLDERS
+- media, templates, static
+
+create Procfile and put === web: gunicorn codestar.wsgi
+
+git add, commit and push
+
+deploy from Heroku via GitHub.
+</details>
 
 [Back to top ⇧](#federal-bureau-of-control)
 
