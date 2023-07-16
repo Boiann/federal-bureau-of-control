@@ -296,9 +296,6 @@ Three templates were used to create the respective Epic, Task and User Story:
 
 Colored text was used when possible (using Tex) for organizing, color-coding and visual distinction.
 
-**Version Control**
-Git branching/squashing and merging was used in this project. When work was to be done a separate branch was made. The strategy was to have each branch dedicated to one feature/fix/issue or epic/iteration. After the work was completed on a particular branch, the branch would be squashed and merged to the main branch. The squashed branches are then usually deleted, but they are left as is in this project to demonstrate development.
-
 **Agile Planning**
 
 Before writing any code, everything was considered and planned as much as possible.
@@ -413,6 +410,9 @@ Similar to Time calculations - GLOBAL, these calculations are not set in stone (
 ![FBC Timeboxing/Project Flow Image](img-link)
 </details>
 
+**Version Control**
+Git branching/squashing and merging was used in this project. When work was to be done a separate branch was made, using author's own created [Guide](https://github.com/Boiann/branching-merging-squashing). The strategy was to have each branch dedicated to one feature/fix/issue or epic/iteration. After the work was completed on a particular branch, the branch would be squashed and merged to the main branch. The squashed branches are then usually deleted, but they are left as is in this project to demonstrate development.
+
 ---
 
 Unfortunately medical and other issues prevented full use of all this planning. After a lengthy hiatus from working on the project, the MVP epics/tasks/user stories were placed in BACKLOG Milestone to signify this. Work on the project continued from there. After talking to a mentor, it was decided not to close unfinished epics/tasks/user stories. The explanation was that this is what happens in real-life development too (unfinished things), and FBC Project Board reflects that.
@@ -445,12 +445,7 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 
  ![Description](img/gif)
 
- - Footer links open in a new tab
- <br>
-
 ### **Home**
-
- ![Description](img/gif)
 
  - Unregistered user can open home page, warning modals for reports/create reports
  <br>

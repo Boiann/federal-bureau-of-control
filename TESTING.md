@@ -16,7 +16,6 @@ Visit the GitHub repository [Here.](https://github.com/Boiann/federal-bureau-of-
   * [W3C CSS Validator](#w3c-css-validator)
   * [JSHINT Javascript Validator](#jshint-javascript-validator)
   * [CI Python Linter](#ci-python-linter)
-  * [WAVE WebAim](#wave-webaim)
   * [Lighthouse](#lighthouse)
 
 * [Accessibility](#accessibility) 
@@ -41,13 +40,14 @@ Visit the GitHub repository [Here.](https://github.com/Boiann/federal-bureau-of-
 
 ### **W3C HTML Validator**
 
-The [HTML W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) was used to validate the HTML code used, showing no errors.
+The [HTML W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) was used to validate the HTML code used, showing no errors except on single report page, 'strike' element is obsolete. As this is a feature (text censoring from admin site) and works as intended, the error is disregarded.
+
 
 <!-- imgs -->
 
 ### **W3C CSS Validator**
 
-The [CSS Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) was used to validate the CSS code used, showing no errors.
+The [CSS Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) was used to validate the CSS code used, showing no errors on the customized style.css, uploaded by direct input.
 
 <!-- imgs -->
 
@@ -59,13 +59,7 @@ The [JsHint](https://jshint.com/) was used to validate the Javascript code used,
 
 ### **CI Python Linter**
 
-The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code used, showing no errors.
-
-<!-- imgs -->
-
-### **WAVE WebAim**
-
-The [W.A.V.E.](https://wave.webaim.org/) was used to test for accessibility.
+The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code used, showing no errors except for one 'line too long' in settings.py. This could not be resolved despite best efforts.
 
 <!-- imgs -->
 
@@ -78,6 +72,16 @@ The [LightHouse](https://developer.chrome.com/docs/lighthouse/overview/) was use
 [Back to top ⇧](#federal-bureau-of-control---testing)
 
 ---
+
+## **Accessibility**
+
+### **WAVE WebAim**
+
+The [W.A.V.E.](https://wave.webaim.org/) was used to test for accessibility, showing no errors except for a single report page on censored (blacked-out) text. As this is a feature and works as intended, the contrast errors are disregarded.
+
+<!-- imgs -->
+
+[Back to top ⇧](#federal-bureau-of-control---testing)
 
 ## **Manual Testing**
 
@@ -180,12 +184,7 @@ The [LightHouse](https://developer.chrome.com/docs/lighthouse/overview/) was use
 
  ![Description](img/gif)
 
- - Footer links open in a new tab working
- <br>
-
 ##### **Home**
-
- ![Description](img/gif)
 
  - Unregistered user can open home page, warning modals for reports/create reports working
  <br>
@@ -312,6 +311,18 @@ The [LightHouse](https://developer.chrome.com/docs/lighthouse/overview/) was use
  ![Description](img/gif)
 
   - Admin can delete a comment working
+ <br>
+
+ ![Description](img/gif)
+
+##### **Error pages**
+
+  - Error 400 (page not found) page with 'Go Home' button working
+ <br>
+
+ ![Description](img/gif)
+
+   - Error 500 (internal server error) page with 'Go Home' button working. To simulate Error 500 workspace server page was used.
  <br>
 
  ![Description](img/gif)

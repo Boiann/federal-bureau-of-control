@@ -3,7 +3,8 @@ from .models import Event, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
-# Register the Event model with the admin site and use SummernoteModelAdmin for rich text editing
+# Register the Event model with the admin site and use
+# SummernoteModelAdmin for rich text editing
 @admin.register(Event)
 class EventAdmin(SummernoteModelAdmin):
 
