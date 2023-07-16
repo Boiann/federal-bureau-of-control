@@ -5,7 +5,7 @@ https://github.com/Boiann/budget-calculator -->
 
 FEDERAL BUREAU OF CONTROL is a Project 4 for Code Institute Full-stack development program: Full-Stack Toolkit. Made with passion for anyone interested in Control, a game by Remedy Entertainment Plc. Federal Bureau of Control (FBC) is a part of the game narrative and much of the game lore & events are presented through FBC documents found in-game. This Project was an attempt to bring the FBC to life, and imagine how it would look like in real life.
 
-<!--Am I Responsive image -->
+![Responsive website image](assets/images/general/fbc-responsive-img.png)
 
 Visit the live site [Here.](https://federal-bureau-of-control.herokuapp.com/ "Link to Federal Bureau of Control")
 
@@ -228,45 +228,45 @@ The provided database schema consists of two tables: Event and Comment. The Even
 
 Wireframes for the project were developed right after the idea for the project was chosen.
 Wireframes for Assessment Guide and Project Planning & Ux were made before the ones for the content of the pages themselves.
-<!-- ADD IMG -->
+
 <details>
 <summary>Assessment guide wireframe</summary>
 
-![Assessment guide wireframe](img-link)
+![Assessment guide wireframe](assets/wireframes/portfolio-4-assessment-guide.png)
 </details>
-<!-- ADD IMG -->
+
 <details>
 <summary>Project planning wireframe</summary>
 
-![Project planning wireframe](img-link)
+![Project planning wireframe](assets/wireframes/portfolio-4-planning-and-ux.png)
 </details>
 
 There are three wireframes for the project. Using Agile, the basic or Minimal Viable Product (MVP) was to be made first, then if time allows it the scope can increase, making the project grow towards Enhanced and finally Superior project.
 
 Differences between scopes were considered early as to allow for the use of Agile methodology. Personal, work, family, dependants and health situations were considered to have impact on time available for the project. Ideally, maximum time was to be taken to finish the project making the scope bigger.
-<!-- ADD IMG -->
+
 <details>
 <summary>MVP wireframe</summary>
 
-![MVP wireframe](img-link)
+![MVP wireframe](assets/wireframes/fbc-mvp-wireframe.png)
 </details>
-<!-- ADD IMG -->
+
 <details>
 <summary>Mobile wireframe</summary>
 
-![Mobile wireframe](img-link)
+![Mobile wireframe](assets/wireframes/fbc-mobile-wireframe.png)
 </details>
-<!-- ADD IMG -->
+
 <details>
 <summary>Enhanced wireframe</summary>
 
-![Enhanced wireframe](img-link)
+![Enhanced wireframe](assets/wireframes/fbc-enhanced-wireframe.png)
 </details>
-<!-- ADD IMG -->
+
 <details>
 <summary>Superior wireframe</summary>
 
-![Superior wireframe](img-link)
+![Superior wireframe](assets/wireframes/fbc-superior-wireframe.png)
 </details>
 
 [Back to top ⇧](#federal-bureau-of-control)
@@ -403,12 +403,14 @@ Similar to Time calculations - GLOBAL, these calculations are not set in stone (
 - Epic/Milestone should be on a weekly basis ( approx 25 hrs )
 - The day before, preferably prepare the next week's milestone plan using Projects Board/Issues and do a revision of work done
 </details>
-<!-- ADD IMAGE -->
+
 <details>
 <summary>FBC Timeboxing/Project Flow Image</summary>
 
-![FBC Timeboxing/Project Flow Image](img-link)
+![FBC Timeboxing/Project Flow Image](assets/images/general/fbc-timeboxing.png)
 </details>
+
+---
 
 **Version Control**
 Git branching/squashing and merging was used in this project. When work was to be done a separate branch was made, using author's own created [Guide](https://github.com/Boiann/branching-merging-squashing). The strategy was to have each branch dedicated to one feature/fix/issue or epic/iteration. After the work was completed on a particular branch, the branch would be squashed and merged to the main branch. The squashed branches are then usually deleted, but they are left as is in this project to demonstrate development.

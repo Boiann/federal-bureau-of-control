@@ -42,32 +42,235 @@ Visit the GitHub repository [Here.](https://github.com/Boiann/federal-bureau-of-
 
 The [HTML W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) was used to validate the HTML code used, showing no errors except on single report page, 'strike' element is obsolete. As this is a feature (text censoring from admin site) and works as intended, the error is disregarded.
 
+ - Index
+ <br>
 
-<!-- imgs -->
+ ![Index](assets/images/validators/html/index.png)
+
+ - Home
+ <br>
+
+ ![Home](assets/images/validators/html/home.png)
+
+ - Reports
+ <br>
+
+ ![Reports](assets/images/validators/html/reports.png)
+
+ - Login
+ <br>
+
+ ![Login](assets/images/validators/html/login.png)
+
+ - Logout
+ <br>
+
+ ![Logout](assets/images/validators/html/logout.png)
+
+ - GitHub Login
+ <br>
+
+ ![GitHub Login](assets/images/validators/html/github-login.png)
+
+ - Register
+ <br>
+
+ ![Register](assets/images/validators/html/register.png)
+
+ - Single Report
+ <br>
+
+ ![Single Report](assets/images/validators/html/single-event.png)
+
+ - Add Report
+ <br>
+
+ ![Add Report](assets/images/validators/html/add-report.png)
+
+ - Update Report
+ <br>
+
+ ![Update Report](assets/images/validators/html/update-event.png)
+
+ - Delete Report
+ <br>
+
+ ![Delete Report](assets/images/validators/html/delete-event.png)
+
+ - My Reports
+ <br>
+
+ ![My Reports](assets/images/validators/html/my-reports.png)
 
 ### **W3C CSS Validator**
 
 The [CSS Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) was used to validate the CSS code used, showing no errors on the customized style.css, uploaded by direct input.
 
-<!-- imgs -->
+ - CSS validation
+ <br>
+
+ ![CSS Validation](assets/images/validators/css/css.png)
 
 ### **JSHINT Javascript Validator**
 
 The [JsHint](https://jshint.com/) was used to validate the Javascript code used, showing no errors.
 
-<!-- imgs -->
+ - Javascript validation
+ <br>
+
+ ![Javascript validation](assets/images/validators/js/js.png)
 
 ### **CI Python Linter**
 
 The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code used, showing no errors except for one 'line too long' in settings.py. This could not be resolved despite best efforts.
 
-<!-- imgs -->
+ - admin.py
+ <br>
+
+ ![admin.py](assets/images/validators/py/admin.py.png)
+
+ - forms.py
+ <br>
+
+ ![forms.py](assets/images/validators/py/forms.py.png)
+
+ - manage.py
+ <br>
+
+ ![manage.py](assets/images/validators/py/manage.py.png)
+
+ - models.py
+ <br>
+
+ ![models.py](assets/images/validators/py/models.py.png)
+
+ - settings.py
+ <br>
+
+ ![settings.py](assets/images/validators/py/settings.py.png)
+
+ - urls.py
+ <br>
+
+ ![urls.py](assets/images/validators/py/urls.py.png)
+
+ - urls.py-project
+ <br>
+
+ ![urls.py-project](assets/images/validators/py/urls.py-project.png)
+
+ - views.py
+ <br>
+
+ ![views.py](assets/images/validators/py/views.py.png)
 
 ### **Lighthouse**
 
 The [LightHouse](https://developer.chrome.com/docs/lighthouse/overview/) was used for testing performance.
 
-<!-- imgs -->
+#### **Desktop**
+
+ - Index
+ <br>
+
+ ![Index](assets/images/validators/lighthouse/desktop/index.png)
+
+ - Home
+ <br>
+
+ ![Home](assets/images/validators/lighthouse/desktop/home.png)
+
+ - Reports
+ <br>
+
+ ![Reports](assets/images/validators/lighthouse/desktop/reports.png)
+
+ - Single Report
+ <br>
+
+ ![Single report](assets/images/validators/lighthouse/desktop/single-report.png)
+
+ - Login
+ <br>
+
+ ![Login](assets/images/validators/lighthouse/desktop/login.png)
+
+ - Logout
+ <br>
+
+ ![Logout](assets/images/validators/lighthouse/desktop/logout.png)
+
+ - Register
+ <br>
+
+ ![Register](assets/images/validators/lighthouse/desktop/register.png)
+
+ - Create Report
+ <br>
+
+ ![Create Report](assets/images/validators/lighthouse/desktop/create-report.png)
+
+ - Update Report
+ <br>
+
+ ![Update report](assets/images/validators/lighthouse/desktop/update-report.png)
+
+ - Delete Report
+ <br>
+
+ ![Delete report](assets/images/validators/lighthouse/desktop/delete-report.png)
+
+#### **Mobile**
+
+ - Index
+ <br>
+
+ ![Index](assets/images/validators/lighthouse/mobile/index.png)
+
+ - Home
+ <br>
+
+ ![Home](assets/images/validators/lighthouse/mobile/home.png)
+
+ - Reports
+ <br>
+
+ ![Reports](assets/images/validators/lighthouse/mobile/reports.png)
+
+ - Single Report
+ <br>
+
+ ![Single report](assets/images/validators/lighthouse/mobile/single-report.png)
+
+ - Login
+ <br>
+
+ ![Login](assets/images/validators/lighthouse/mobile/login.png)
+
+ - Logout
+ <br>
+
+ ![Logout](assets/images/validators/lighthouse/mobile/logout.png)
+
+ - Register
+ <br>
+
+ ![Register](assets/images/validators/lighthouse/mobile/register.png)
+
+ - Create Report
+ <br>
+
+ ![Create Report](assets/images/validators/lighthouse/mobile/create-report.png)
+
+ - Update Report
+ <br>
+
+ ![Update report](assets/images/validators/lighthouse/mobile/update-report.png)
+
+ - Delete Report
+ <br>
+
+ ![Delete report](assets/images/validators/lighthouse/mobile/delete-report.png)
 
 [Back to top ⇧](#federal-bureau-of-control---testing)
 
@@ -79,7 +282,45 @@ The [LightHouse](https://developer.chrome.com/docs/lighthouse/overview/) was use
 
 The [W.A.V.E.](https://wave.webaim.org/) was used to test for accessibility, showing no errors except for a single report page on censored (blacked-out) text. As this is a feature and works as intended, the contrast errors are disregarded.
 
-<!-- imgs -->
+ - Index
+ <br>
+
+ ![Index](assets/images/validators/wave/index.png)
+
+ - Home
+ <br>
+
+ ![Home](assets/images/validators/wave/home.png)
+
+ - Reports
+ <br>
+
+ ![Reports](assets/images/validators/wave/reports.png)
+
+ - Single Report
+ <br>
+
+ ![Single report](assets/images/validators/wave/single-report.png)
+
+ - Login
+ <br>
+
+ ![Login](assets/images/validators/wave/login.png)
+
+ - Logout
+ <br>
+
+ ![Logout](assets/images/validators/wave/logout.png)
+
+ - Register
+ <br>
+
+ ![Register](assets/images/validators/wave/register.png)
+
+ - GitHub Login
+ <br>
+
+ ![Github login](assets/images/validators/wave/github-login.png)
 
 [Back to top ⇧](#federal-bureau-of-control---testing)
 
@@ -332,7 +573,11 @@ The [W.A.V.E.](https://wave.webaim.org/) was used to test for accessibility, sho
 Responsiveness for the website was thoroughly tested for devices up to 320px wide. 
 The website still works well on a device 280px wide, with visible difficulties with reading the text below that width.
 
-<!-- imgs -->
+<details>
+<summary>Responsiveness</summary>
+
+![Responsiveness](assets/images/validators/responsive/responsiveness.gif)
+</details>
 
 [Back to top ⇧](#federal-bureau-of-control---testing)
 
@@ -377,7 +622,10 @@ This is one thing to be more careful in the future if making database-related pr
 
 The website was tested on the following browsers with no issues found: Google Chrome, Mozzilla Firefox, Microsoft Edge and Opera Browser.
 
-<!-- img -->
+ - Browser Compatibility
+ <br>
+
+ ![Browser Compatibility](assets/images/general/browsers-compatibility.png)
 
 [Back to top ⇧](#federal-bureau-of-control---testing)
 
