@@ -16,7 +16,6 @@ Visit the GitHub repository [Here.](https://github.com/Boiann/federal-bureau-of-
   * [W3C CSS Validator](#w3c-css-validator)
   * [JSHINT Javascript Validator](#jshint-javascript-validator)
   * [CI Python Linter](#ci-python-linter)
-  * [WAVE WebAim](#wave-webaim)
   * [Lighthouse](#lighthouse)
 
 * [Accessibility](#accessibility) 
@@ -41,43 +40,289 @@ Visit the GitHub repository [Here.](https://github.com/Boiann/federal-bureau-of-
 
 ### **W3C HTML Validator**
 
-The [HTML W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) was used to validate the HTML code used, showing no errors.
+The [HTML W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) was used to validate the HTML code used, showing no errors except on single report page, 'strike' element is obsolete. As this is a feature (text censoring from admin site) and works as intended, the error is disregarded.
 
-<!-- imgs -->
+ - Index
+ <br>
+
+ ![Index](assets/images/validators/html/index.png)
+
+ - Home
+ <br>
+
+ ![Home](assets/images/validators/html/home.png)
+
+ - Reports
+ <br>
+
+ ![Reports](assets/images/validators/html/reports.png)
+
+ - Login
+ <br>
+
+ ![Login](assets/images/validators/html/login.png)
+
+ - Logout
+ <br>
+
+ ![Logout](assets/images/validators/html/logout.png)
+
+ - GitHub Login
+ <br>
+
+ ![GitHub Login](assets/images/validators/html/github-login.png)
+
+ - Register
+ <br>
+
+ ![Register](assets/images/validators/html/register.png)
+
+ - Single Report
+ <br>
+
+ ![Single Report](assets/images/validators/html/single-event.png)
+
+ - Add Report
+ <br>
+
+ ![Add Report](assets/images/validators/html/add-report.png)
+
+ - Update Report
+ <br>
+
+ ![Update Report](assets/images/validators/html/update-event.png)
+
+ - Delete Report
+ <br>
+
+ ![Delete Report](assets/images/validators/html/delete-event.png)
+
+ - My Reports
+ <br>
+
+ ![My Reports](assets/images/validators/html/my-reports.png)
 
 ### **W3C CSS Validator**
 
-The [CSS Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) was used to validate the CSS code used, showing no errors.
+The [CSS Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) was used to validate the CSS code used, showing no errors on the customized style.css, uploaded by direct input.
 
-<!-- imgs -->
+ - CSS validation
+ <br>
+
+ ![CSS Validation](assets/images/validators/css/css.png)
 
 ### **JSHINT Javascript Validator**
 
 The [JsHint](https://jshint.com/) was used to validate the Javascript code used, showing no errors.
 
-<!-- imgs -->
+ - Javascript validation
+ <br>
+
+ ![Javascript validation](assets/images/validators/js/js.png)
 
 ### **CI Python Linter**
 
-The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code used, showing no errors.
+The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code used, showing no errors except for one 'line too long' in settings.py. This could not be resolved despite best efforts.
 
-<!-- imgs -->
+ - admin.py
+ <br>
 
-### **WAVE WebAim**
+ ![admin.py](assets/images/validators/py/admin.py.png)
 
-The [W.A.V.E.](https://wave.webaim.org/) was used to test for accessibility.
+ - forms.py
+ <br>
 
-<!-- imgs -->
+ ![forms.py](assets/images/validators/py/forms.py.png)
+
+ - manage.py
+ <br>
+
+ ![manage.py](assets/images/validators/py/manage.py.png)
+
+ - models.py
+ <br>
+
+ ![models.py](assets/images/validators/py/models.py.png)
+
+ - settings.py
+ <br>
+
+ ![settings.py](assets/images/validators/py/settings.py.png)
+
+ - urls.py
+ <br>
+
+ ![urls.py](assets/images/validators/py/urls.py.png)
+
+ - urls.py-project
+ <br>
+
+ ![urls.py-project](assets/images/validators/py/urls.py-project.png)
+
+ - views.py
+ <br>
+
+ ![views.py](assets/images/validators/py/views.py.png)
 
 ### **Lighthouse**
 
 The [LightHouse](https://developer.chrome.com/docs/lighthouse/overview/) was used for testing performance.
 
-<!-- imgs -->
+#### **Desktop**
+
+ - Index
+ <br>
+
+ ![Index](assets/images/validators/lighthouse/desktop/index.png)
+
+ - Home
+ <br>
+
+ ![Home](assets/images/validators/lighthouse/desktop/home.png)
+
+ - Reports
+ <br>
+
+ ![Reports](assets/images/validators/lighthouse/desktop/reports.png)
+
+ - Single Report
+ <br>
+
+ ![Single report](assets/images/validators/lighthouse/desktop/single-report.png)
+
+ - Login
+ <br>
+
+ ![Login](assets/images/validators/lighthouse/desktop/login.png)
+
+ - Logout
+ <br>
+
+ ![Logout](assets/images/validators/lighthouse/desktop/logout.png)
+
+ - Register
+ <br>
+
+ ![Register](assets/images/validators/lighthouse/desktop/register.png)
+
+ - Create Report
+ <br>
+
+ ![Create Report](assets/images/validators/lighthouse/desktop/create-report.png)
+
+ - Update Report
+ <br>
+
+ ![Update report](assets/images/validators/lighthouse/desktop/update-report.png)
+
+ - Delete Report
+ <br>
+
+ ![Delete report](assets/images/validators/lighthouse/desktop/delete-report.png)
+
+#### **Mobile**
+
+ - Index
+ <br>
+
+ ![Index](assets/images/validators/lighthouse/mobile/index.png)
+
+ - Home
+ <br>
+
+ ![Home](assets/images/validators/lighthouse/mobile/home.png)
+
+ - Reports
+ <br>
+
+ ![Reports](assets/images/validators/lighthouse/mobile/reports.png)
+
+ - Single Report
+ <br>
+
+ ![Single report](assets/images/validators/lighthouse/mobile/single-report.png)
+
+ - Login
+ <br>
+
+ ![Login](assets/images/validators/lighthouse/mobile/login.png)
+
+ - Logout
+ <br>
+
+ ![Logout](assets/images/validators/lighthouse/mobile/logout.png)
+
+ - Register
+ <br>
+
+ ![Register](assets/images/validators/lighthouse/mobile/register.png)
+
+ - Create Report
+ <br>
+
+ ![Create Report](assets/images/validators/lighthouse/mobile/create-report.png)
+
+ - Update Report
+ <br>
+
+ ![Update report](assets/images/validators/lighthouse/mobile/update-report.png)
+
+ - Delete Report
+ <br>
+
+ ![Delete report](assets/images/validators/lighthouse/mobile/delete-report.png)
 
 [Back to top ⇧](#federal-bureau-of-control---testing)
 
 ---
+
+## **Accessibility**
+
+### **WAVE WebAim**
+
+The [W.A.V.E.](https://wave.webaim.org/) was used to test for accessibility, showing no errors except for a single report page on censored (blacked-out) text. As this is a feature and works as intended, the contrast errors are disregarded.
+
+ - Index
+ <br>
+
+ ![Index](assets/images/validators/wave/index.png)
+
+ - Home
+ <br>
+
+ ![Home](assets/images/validators/wave/home.png)
+
+ - Reports
+ <br>
+
+ ![Reports](assets/images/validators/wave/reports.png)
+
+ - Single Report
+ <br>
+
+ ![Single report](assets/images/validators/wave/single-report.png)
+
+ - Login
+ <br>
+
+ ![Login](assets/images/validators/wave/login.png)
+
+ - Logout
+ <br>
+
+ ![Logout](assets/images/validators/wave/logout.png)
+
+ - Register
+ <br>
+
+ ![Register](assets/images/validators/wave/register.png)
+
+ - GitHub Login
+ <br>
+
+ ![Github login](assets/images/validators/wave/github-login.png)
+
+[Back to top ⇧](#federal-bureau-of-control---testing)
 
 ## **Manual Testing**
 
@@ -165,163 +410,208 @@ The [LightHouse](https://developer.chrome.com/docs/lighthouse/overview/) was use
 
 ##### **Intro/splash/index**
 
- - Content disclaimer firing when opening the page for the first time, not firing on subsequent visit, spinning logo and animated center text working
- <br>
+<details>
+<summary>Content disclaimer firing when opening the page for the first time, not firing on subsequent visit, spinning logo and animated center text working</summary>
 
- ![Description](img/gif)
+![Content disclaimer](assets/features/1-intro-modal.gif)
+</details>
 
- - Content disclaimer firing when the user clicks on it, link inside the modal opens in a new tab, close modal button working
- <br>
+<details>
+<summary>Content disclaimer firing when the user clicks on it, link inside the modal opens in a new tab, close modal button working</summary>
 
- ![Description](img/gif)
+![User Content disclaimer](assets/features/2-content-modal-link.gif)
+</details>
 
- - Footer links open in a new tab, tooltips present on logo, title and footer links working
- <br>
+<details>
+<summary>Footer links open in a new tab, tooltips present on logo, title and footer links working</summary>
 
- ![Description](img/gif)
-
- - Footer links open in a new tab working
- <br>
+![Footer links](assets/features/3-footer-links.gif)
+</details>
 
 ##### **Home**
 
- ![Description](img/gif)
+<details>
+<summary>Unregistered user can open home page, warning modals for reports/create reports working</summary>
 
- - Unregistered user can open home page, warning modals for reports/create reports working
- <br>
+![Unregistered user modals](assets/features/4-unregistered-modals.gif)
+</details>
 
- ![Description](img/gif)
+<details>
+<summary>Unregistered user warning modal links and close button working</summary>
 
- - Unregistered user warning modal links and close button working
- <br>
+![Unregistered user warning modal links and close button](assets/features/5-unregistered-modal-links.gif)
+</details>
 
- ![Description](img/gif)
+<details>
+<summary>Home page 'More Info' modals working</summary>
 
- - Home page 'More Info' modals working
- <br>
-
- ![Description](img/gif)
+![Home page 'More Info' modals](assets/features/6-home-modals.gif)
+</details>
 
 ##### **Sign Up**
 
- - Cross-links between Sign-up and Log In working
- <br>
+<details>
+<summary>Cross-links between Sign-up and Log In working</summary>
 
- ![Description](img/gif)
+![Cross-links between Sign-up and Log In](assets/features/7-register-login-cross-links.gif)
+</details>
 
- - Successful registering success message working
- <br>
+<details>
+<summary>Successful registering success message working</summary>
 
- ![Description](img/gif)
+![Successful registering success message](assets/features/8-registering-success.gif)
+</details>
 
 ##### **Log In/Out**
 
- - Successful login success message, Agent name in top right corner working
- <br>
+<details>
+<summary>Successful login success message, Agent name in top right corner working</summary>
 
- ![Description](img/gif)
+![Successful login success message, Agent name in top right corner](assets/features/9-login-success.gif)
+</details>
 
- - GitHub log in working
- <br>
+<details>
+<summary>GitHub log in working</summary>
 
- ![Description](img/gif)
+![GitHub log in](assets/features/10-github-register.gif)
+</details>
 
- - Sure you want to log out page, logging out success message, no Agent name in top right corner working
- <br>
+<details>
+<summary>Sure you want to log out page, logging out success message, no Agent name in top right corner working</summary>
 
- ![Description](img/gif)
+![Sure you want to log out page, logging out success message, no Agent name in top right corner](assets/features/11-logout-success.gif)
+</details>
 
 ##### **Reports**
 
- - Paginated view of reports with like/dislike counters, next/back page button working
- <br>
+<details>
+<summary>Paginated view of reports with like/dislike counters, next/back page button working</summary>
 
- ![Description](img/gif)
+![Paginated view of reports with like/dislike counters, next/back page button](assets/features/12-reports-paginated.gif)
+</details>
 
- - Open an report, like/dislike buttons working
- <br>
+<details>
+<summary>Open an report, like/dislike buttons working</summary>
 
- ![Description](img/gif)
+![Open an report, like/dislike buttons](assets/features/13-open-report.gif)
+</details>
 
- - Adding a comment, comments counter updating, if no comments - message working
- <br>
+<details>
+<summary>Adding a comment, comments counter updating, if no comments - message working</summary>
 
- ![Description](img/gif)
+![Adding a comment, comments counter updating, if no comments - message](assets/features/14-comment.gif)
+</details>
 
 ##### **Create Report**
 
- - Adding a report, template image if no image uploaded, director approval needed message and redirect to My-Reports page, added report not visible on Reports page working
- <br>
+<details>
+<summary>Adding a report, template image if no image uploaded, director approval needed message and redirect to My-Reports page, added report not visible on Reports page working</summary>
 
- ![Description](img/gif)
+![Adding a report, template image if no image uploaded, director approval needed message and redirect](assets/features/15-add-report.gif)
+</details>
 
 ##### **My Reports**
 
- - Paginated view of user's reports, unique for each user, Update/Edit and Delete buttons show up for user's own report working
- <br>
+<details>
+<summary>Paginated view of user's reports, unique for each user, Update/Edit and Delete buttons show up for user's own report working</summary>
 
- ![Description](img/gif)
+![Paginated view of user's reports, unique for each user, Update/Edit and Delete buttons show up for user's own report](assets/features/16-user-report.gif)
+</details>
 
- - Update Report and success message working
- <br>
+<details>
+<summary>Update Report and success message working</summary>
 
- ![Description](img/gif)
+![Update Report and success message](assets/features/17-update-report.gif)
+</details>
 
- - Delete Report, 'are you sure' question and success message working
- <br>
+<details>
+<summary>Delete Report, 'are you sure' question and success message working</summary>
 
- ![Description](img/gif)
+![Delete Report, 'are you sure' question and success message](assets/features/18-delete-report.gif)
+</details>
 
 ##### **Admin/Director site differences**
 
- - Director access extra nav link for admin opening admin page in a separate tab, top right corner changes from Agent: *user* to Director: *user* working
- <br>
+<details>
+<summary>Director access extra nav link for admin opening admin page in a separate tab, top right corner changes from Agent: *user* to Director: *user* working</summary>
 
- ![Description](img/gif)
+![Director access extra nav link for admin opening admin page in a separate tab, top right corner changes from Agent: *user* to Director: *user*](assets/features/19-admin-login.gif)
+</details>
 
- - Reports and Create Report has no warning text for admin working
- <br>
+<details>
+<summary>Reports and Create Report has no warning text for admin working</summary>
 
- ![Description](img/gif)
+![Reports and Create Report has no warning text for admin](assets/features/20-admin-no-warning.gif/)
+</details>
 
 ##### **Admin page**
 
- - Admin can approve and publish report, visible on Reports page to a normal user working
- <br>
+<details>
+<summary>Admin can approve and publish report, visible on Reports page to a normal user working</summary>
 
- ![Description](img/gif)
+![Admin can approve and publish report, visible on Reports page to a normal user](assets/features/21-admin-report-approve.gif)
+</details>
 
- - Admin can create a draft report working
- <br>
+<details>
+<summary>Admin can create a draft report working</summary>
 
- ![Description](img/gif)
+![Admin can create a draft report](assets/features/22-admin-draft.gif)
+</details>
 
- - Admin can change a report, censoring perk working working
- <br>
+<details>
+<summary>Admin can change a report, censoring perk working</summary>
 
- ![Description](img/gif)
+![Admin can change a report, censoring perk working](assets/features/23-admin-censor.gif)
+</details>
 
- - Admin can delete a report and user working
- <br>
+<details>
+<summary>Admin can delete a report and user working</summary>
 
- ![Description](img/gif)
+![Admin can delete a report and user](assets/features/24-admin-delete.gif)
+</details>
 
-  - Admin can approve and change a comment working
- <br>
+<details>
+<summary>Admin can approve and change a comment working</summary>
 
- ![Description](img/gif)
+![Admin can approve and change a comment](assets/features/25-admin-comment-change.gif)
+</details>
 
-  - Admin can delete a comment working
- <br>
+<details>
+<summary>Admin can delete a comment working</summary>
 
- ![Description](img/gif)
+![Admin can delete a comment](assets/features/26-admin-delete-comment.gif)
+</details>
+
+##### **Error pages**
+
+<details>
+<summary>Error 400 (page not found) page with 'Go Home' button working</summary>
+
+![Error 400 (page not found) page with 'Go Home' button](assets/features/27-error-400.gif)
+</details>
+
+<details>
+<summary>Error 500 (internal server error) page with 'Go Home' button working</summary>
+
+![Error 500 (internal server error) page with 'Go Home' button](assets/features/28-error-500.gif)
+</details>
+
+---
+
+[Back to top ⇧](#federal-bureau-of-control)
+
+---
 
 #### **Responsiveness**
 
 Responsiveness for the website was thoroughly tested for devices up to 320px wide. 
 The website still works well on a device 280px wide, with visible difficulties with reading the text below that width.
 
-<!-- imgs -->
+<details>
+<summary>Responsiveness</summary>
+
+![Responsiveness](assets/images/validators/responsive/responsiveness.gif)
+</details>
 
 [Back to top ⇧](#federal-bureau-of-control---testing)
 
@@ -366,7 +656,10 @@ This is one thing to be more careful in the future if making database-related pr
 
 The website was tested on the following browsers with no issues found: Google Chrome, Mozzilla Firefox, Microsoft Edge and Opera Browser.
 
-<!-- img -->
+ - Browser Compatibility
+ <br>
+
+ ![Browser Compatibility](assets/images/general/browsers-compatibility.png)
 
 [Back to top ⇧](#federal-bureau-of-control---testing)
 

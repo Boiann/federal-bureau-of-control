@@ -5,7 +5,7 @@ https://github.com/Boiann/budget-calculator -->
 
 FEDERAL BUREAU OF CONTROL is a Project 4 for Code Institute Full-stack development program: Full-Stack Toolkit. Made with passion for anyone interested in Control, a game by Remedy Entertainment Plc. Federal Bureau of Control (FBC) is a part of the game narrative and much of the game lore & events are presented through FBC documents found in-game. This Project was an attempt to bring the FBC to life, and imagine how it would look like in real life.
 
-<!--Am I Responsive image -->
+![Responsive website image](assets/images/general/fbc-responsive-img.png)
 
 Visit the live site [Here.](https://federal-bureau-of-control.herokuapp.com/ "Link to Federal Bureau of Control")
 
@@ -122,7 +122,7 @@ The color scheme used in the project is not explicitly defined. Using Bootstrap 
 ### **Imagery**
 
 Only couple of images are used that are not user-submitted; 
- - the background inverted pyramid - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1688484957/c1b9dbyz6skmpuslnycf.png "Link to inverted pyramid background image")
+ - the background inverted pyramid - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1689443363/Mine/site-imgs/fbc-background-image_ldmqvl.png "Link to inverted pyramid background image")
  - the inverted pyramid spinning logo(used for favicon too) - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1688470337/Pyramid_Shape_lilgag.webp "Link to inverted pyramid logo image")
  - FBD Seal image found on intro/splash page (used as a report placeholder too) - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1688458922/fbc-seal-color_ppeq9n.png "Link to FBC Seal image")
  - FBD offices image found on home - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1688585865/wallpaperflare.com_wallpaper_nrvimz.jpg "Link to FBC offices image")
@@ -228,45 +228,45 @@ The provided database schema consists of two tables: Event and Comment. The Even
 
 Wireframes for the project were developed right after the idea for the project was chosen.
 Wireframes for Assessment Guide and Project Planning & Ux were made before the ones for the content of the pages themselves.
-<!-- ADD IMG -->
+
 <details>
 <summary>Assessment guide wireframe</summary>
 
-![Assessment guide wireframe](img-link)
+![Assessment guide wireframe](assets/wireframes/portfolio-4-assessment-guide.png)
 </details>
-<!-- ADD IMG -->
+
 <details>
 <summary>Project planning wireframe</summary>
 
-![Project planning wireframe](img-link)
+![Project planning wireframe](assets/wireframes/portfolio-4-planning-and-ux.png)
 </details>
 
 There are three wireframes for the project. Using Agile, the basic or Minimal Viable Product (MVP) was to be made first, then if time allows it the scope can increase, making the project grow towards Enhanced and finally Superior project.
 
 Differences between scopes were considered early as to allow for the use of Agile methodology. Personal, work, family, dependants and health situations were considered to have impact on time available for the project. Ideally, maximum time was to be taken to finish the project making the scope bigger.
-<!-- ADD IMG -->
+
 <details>
 <summary>MVP wireframe</summary>
 
-![MVP wireframe](img-link)
+![MVP wireframe](assets/wireframes/fbc-mvp-wireframe.png)
 </details>
-<!-- ADD IMG -->
+
 <details>
 <summary>Mobile wireframe</summary>
 
-![Mobile wireframe](img-link)
+![Mobile wireframe](assets/wireframes/fbc-mobile-wireframe.png)
 </details>
-<!-- ADD IMG -->
+
 <details>
 <summary>Enhanced wireframe</summary>
 
-![Enhanced wireframe](img-link)
+![Enhanced wireframe](assets/wireframes/fbc-enhanced-wireframe.png)
 </details>
-<!-- ADD IMG -->
+
 <details>
 <summary>Superior wireframe</summary>
 
-![Superior wireframe](img-link)
+![Superior wireframe](assets/wireframes/fbc-superior-wireframe.png)
 </details>
 
 [Back to top ⇧](#federal-bureau-of-control)
@@ -295,9 +295,6 @@ Three templates were used to create the respective Epic, Task and User Story:
   - [USER STORY](https://github.com/Boiann/federal-bureau-of-control/issues/new?assignees=&labels=&projects=&template=user-story.md&title=USER+STORY%3A+TITLE)
 
 Colored text was used when possible (using Tex) for organizing, color-coding and visual distinction.
-
-**Version Control**
-Git branching/squashing and merging was used in this project. When work was to be done a separate branch was made. The strategy was to have each branch dedicated to one feature/fix/issue or epic/iteration. After the work was completed on a particular branch, the branch would be squashed and merged to the main branch. The squashed branches are then usually deleted, but they are left as is in this project to demonstrate development.
 
 **Agile Planning**
 
@@ -406,12 +403,17 @@ Similar to Time calculations - GLOBAL, these calculations are not set in stone (
 - Epic/Milestone should be on a weekly basis ( approx 25 hrs )
 - The day before, preferably prepare the next week's milestone plan using Projects Board/Issues and do a revision of work done
 </details>
-<!-- ADD IMAGE -->
+
 <details>
 <summary>FBC Timeboxing/Project Flow Image</summary>
 
-![FBC Timeboxing/Project Flow Image](img-link)
+![FBC Timeboxing/Project Flow Image](assets/images/general/fbc-timeboxing.png)
 </details>
+
+---
+
+**Version Control**
+Git branching/squashing and merging was used in this project. When work was to be done a separate branch was made, using author's own created [Guide](https://github.com/Boiann/branching-merging-squashing). The strategy was to have each branch dedicated to one feature/fix/issue or epic/iteration. After the work was completed on a particular branch, the branch would be squashed and merged to the main branch. The squashed branches are then usually deleted, but they are left as is in this project to demonstrate development.
 
 ---
 
@@ -430,171 +432,195 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 
 ### **Intro/splash/index**
 
- - Content disclaimer firing when opening the page for the first time, not firing on subsequent visit, spinning logo and animated center text
- <br>
+<details>
+<summary>Content disclaimer firing when opening the page for the first time, not firing on subsequent visit, spinning logo and animated center text</summary>
 
- ![Description](img/gif)
+![Content disclaimer](assets/features/1-intro-modal.gif)
+</details>
 
- - Content disclaimer firing when the user clicks on it, link inside the modal opens in a new tab, close modal button
- <br>
+<details>
+<summary>Content disclaimer firing when the user clicks on it, link inside the modal opens in a new tab, close modal button</summary>
 
- ![Description](img/gif)
+![User Content disclaimer](assets/features/2-content-modal-link.gif)
+</details>
 
- - Footer links open in a new tab, tooltips present on logo, title and footer links
- <br>
+<details>
+<summary>Footer links open in a new tab, tooltips present on logo, title and footer links</summary>
 
- ![Description](img/gif)
-
- - Footer links open in a new tab
- <br>
+![Footer links](assets/features/3-footer-links.gif)
+</details>
 
 ### **Home**
 
- ![Description](img/gif)
+<details>
+<summary>Unregistered user can open home page, warning modals for reports/create reports</summary>
 
- - Unregistered user can open home page, warning modals for reports/create reports
- <br>
+![Unregistered user modals](assets/features/4-unregistered-modals.gif)
+</details>
 
- ![Description](img/gif)
+<details>
+<summary>Unregistered user warning modal links and close button</summary>
 
- - Unregistered user warning modal links and close button
- <br>
+![Unregistered user warning modal links and close button](assets/features/5-unregistered-modal-links.gif)
+</details>
 
- ![Description](img/gif)
+<details>
+<summary>Home page 'More Info' modals</summary>
 
- - Home page 'More Info' modals
- <br>
-
- ![Description](img/gif)
+![Home page 'More Info' modals](assets/features/6-home-modals.gif)
+</details>
 
 ### **Sign Up**
 
- - Cross-links between Sign-up and Log In
- <br>
+<details>
+<summary>Cross-links between Sign-up and Log In</summary>
 
- ![Description](img/gif)
+![Cross-links between Sign-up and Log In](assets/features/7-register-login-cross-links.gif)
+</details>
 
- - Successful registering success message
- <br>
+<details>
+<summary>Successful registering success message</summary>
 
- ![Description](img/gif)
+![Successful registering success message](assets/features/8-registering-success.gif)
+</details>
 
 ### **Log In/Out**
 
- - Successful login success message, Agent name in top right corner
- <br>
+<details>
+<summary>Successful login success message, Agent name in top right corner</summary>
 
- ![Description](img/gif)
+![Successful login success message, Agent name in top right corner](assets/features/9-login-success.gif)
+</details>
 
- - GitHub log in
- <br>
+<details>
+<summary>GitHub log in</summary>
 
- ![Description](img/gif)
+![GitHub log in](assets/features/10-github-register.gif)
+</details>
 
- - Sure you want to log out page, logging out success message, no Agent name in top right corner
- <br>
+<details>
+<summary>Sure you want to log out page, logging out success message, no Agent name in top right corner</summary>
 
- ![Description](img/gif)
+![Sure you want to log out page, logging out success message, no Agent name in top right corner](assets/features/11-logout-success.gif)
+</details>
 
 ### **Reports**
 
- - Paginated view of reports with like/dislike counters, next/back page button
- <br>
+<details>
+<summary>Paginated view of reports with like/dislike counters, next/back page button</summary>
 
- ![Description](img/gif)
+![Paginated view of reports with like/dislike counters, next/back page button](assets/features/12-reports-paginated.gif)
+</details>
 
- - Open an report, like/dislike buttons
- <br>
+<details>
+<summary>Open an report, like/dislike buttons</summary>
 
- ![Description](img/gif)
+![Open an report, like/dislike buttons](assets/features/13-open-report.gif)
+</details>
 
- - Adding a comment, comments counter updating, if no comments - message
- <br>
+<details>
+<summary>Adding a comment, comments counter updating, if no comments - message</summary>
 
- ![Description](img/gif)
+![Adding a comment, comments counter updating, if no comments - message](assets/features/14-comment.gif)
+</details>
 
 ### **Create Report**
 
- - Adding a report, template image if no image uploaded, director approval needed message and redirect to My-Reports page, added report not visible on Reports page
- <br>
+<details>
+<summary>Adding a report, template image if no image uploaded, director approval needed message and redirect to My-Reports page, added report not visible on Reports page</summary>
 
- ![Description](img/gif)
+![Adding a report, template image if no image uploaded, director approval needed message and redirect](assets/features/15-add-report.gif)
+</details>
 
 ### **My Reports**
 
- - Paginated view of user's reports, unique for each user, Update/Edit and Delete buttons show up for user's own report
- <br>
+<details>
+<summary>Paginated view of user's reports, unique for each user, Update/Edit and Delete buttons show up for user's own report</summary>
 
- ![Description](img/gif)
+![Paginated view of user's reports, unique for each user, Update/Edit and Delete buttons show up for user's own report](assets/features/16-user-report.gif)
+</details>
 
- - Update Report and success message
- <br>
+<details>
+<summary>Update Report and success message</summary>
 
- ![Description](img/gif)
+![Update Report and success message](assets/features/17-update-report.gif)
+</details>
 
- - Delete Report, 'are you sure' question and success message
- <br>
+<details>
+<summary>Delete Report, 'are you sure' question and success message</summary>
 
- ![Description](img/gif)
+![Delete Report, 'are you sure' question and success message](assets/features/18-delete-report.gif)
+</details>
 
 ### **Admin/Director site differences**
 
- - Director access extra nav link for admin opening admin page in a separate tab, top right corner changes from Agent: *user* to Director: *user*
- <br>
+<details>
+<summary>Director access extra nav link for admin opening admin page in a separate tab, top right corner changes from Agent: *user* to Director: *user*</summary>
 
- ![Description](img/gif)
+![Director access extra nav link for admin opening admin page in a separate tab, top right corner changes from Agent: *user* to Director: *user*](assets/features/19-admin-login.gif)
+</details>
 
- - Reports and Create Report has no warning text for admin
- <br>
+<details>
+<summary>Reports and Create Report has no warning text for admin</summary>
 
- ![Description](img/gif)
+![Reports and Create Report has no warning text for admin](assets/features/20-admin-no-warning.gif/)
+</details>
 
 ### **Admin page**
 
- - Admin can approve and publish report, visible on Reports page to a normal user
- <br>
+<details>
+<summary>Admin can approve and publish report, visible on Reports page to a normal user</summary>
 
- ![Description](img/gif)
+![Admin can approve and publish report, visible on Reports page to a normal user](assets/features/21-admin-report-approve.gif)
+</details>
 
- - Admin can create a draft report
- <br>
+<details>
+<summary>Admin can create a draft report</summary>
 
- ![Description](img/gif)
+![Admin can create a draft report](assets/features/22-admin-draft.gif)
+</details>
 
- - Admin can change a report, censoring perk working
- <br>
+<details>
+<summary>Admin can change a report, censoring perk</summary>
 
- ![Description](img/gif)
+![Admin can change a report, censoring perk working](assets/features/23-admin-censor.gif)
+</details>
 
- - Admin can delete a report and user
- <br>
+<details>
+<summary>Admin can delete a report and user</summary>
 
- ![Description](img/gif)
+![Admin can delete a report and user](assets/features/24-admin-delete.gif)
+</details>
 
-  - Admin can approve and change a comment
- <br>
+<details>
+<summary>Admin can approve and change a comment</summary>
 
- ![Description](img/gif)
+![Admin can approve and change a comment](assets/features/25-admin-comment-change.gif)
+</details>
 
-  - Admin can delete a comment
- <br>
+<details>
+<summary>Admin can delete a comment</summary>
 
- ![Description](img/gif)
-
-
-[Back to top ⇧](#federal-bureau-of-control)
+![Admin can delete a comment](assets/features/26-admin-delete-comment.gif)
+</details>
 
 ### **Error pages**
 
-  - Error 400 (page not found) page with 'Go Home' button
- <br>
+<details>
+<summary>Error 400 (page not found) page with 'Go Home' button</summary>
 
- ![Description](img/gif)
+![Error 400 (page not found) page with 'Go Home' button](assets/features/27-error-400.gif)
+</details>
 
-   - Error 500 (internal server error) page with 'Go Home' button
- <br>
+<details>
+<summary>Error 500 (internal server error) page with 'Go Home' button</summary>
 
- ![Description](img/gif)
+![Error 500 (internal server error) page with 'Go Home' button](assets/features/28-error-500.gif)
+</details>
+
+---
+
+[Back to top ⇧](#federal-bureau-of-control)
 
 ---
 
