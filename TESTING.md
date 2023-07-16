@@ -410,163 +410,197 @@ The [W.A.V.E.](https://wave.webaim.org/) was used to test for accessibility, sho
 
 ##### **Intro/splash/index**
 
- - Content disclaimer firing when opening the page for the first time, not firing on subsequent visit, spinning logo and animated center text working
- <br>
+<details>
+<summary>Content disclaimer firing when opening the page for the first time, not firing on subsequent visit, spinning logo and animated center text working</summary>
 
- ![Description](img/gif)
+![Content disclaimer](assets/features/1-intro-modal.gif)
+</details>
 
- - Content disclaimer firing when the user clicks on it, link inside the modal opens in a new tab, close modal button working
- <br>
+<details>
+<summary>Content disclaimer firing when the user clicks on it, link inside the modal opens in a new tab, close modal button working</summary>
 
- ![Description](img/gif)
+![User Content disclaimer](assets/features/2-content-modal-link.gif)
+</details>
 
- - Footer links open in a new tab, tooltips present on logo, title and footer links working
- <br>
+<details>
+<summary>Footer links open in a new tab, tooltips present on logo, title and footer links working</summary>
 
- ![Description](img/gif)
+![Footer links](assets/features/3-footer-links.gif)
+</details>
 
 ##### **Home**
 
- - Unregistered user can open home page, warning modals for reports/create reports working
- <br>
+<details>
+<summary>Unregistered user can open home page, warning modals for reports/create reports working</summary>
 
- ![Description](img/gif)
+![Unregistered user modals](assets/features/4-unregistered-modals.gif)
+</details>
 
- - Unregistered user warning modal links and close button working
- <br>
+<details>
+<summary>Unregistered user warning modal links and close button working</summary>
 
- ![Description](img/gif)
+![Unregistered user warning modal links and close button](assets/features/5-unregistered-modal-links.gif)
+</details>
 
- - Home page 'More Info' modals working
- <br>
+<details>
+<summary>Home page 'More Info' modals working</summary>
 
- ![Description](img/gif)
+![Home page 'More Info' modals](assets/features/6-home-modals.gif)
+</details>
 
 ##### **Sign Up**
 
- - Cross-links between Sign-up and Log In working
- <br>
+<details>
+<summary>Cross-links between Sign-up and Log In working</summary>
 
- ![Description](img/gif)
+![Cross-links between Sign-up and Log In](assets/features/7-register-login-cross-links.gif)
+</details>
 
- - Successful registering success message working
- <br>
+<details>
+<summary>Successful registering success message working</summary>
 
- ![Description](img/gif)
+![Successful registering success message](assets/features/8-registering-success.gif)
+</details>
 
 ##### **Log In/Out**
 
- - Successful login success message, Agent name in top right corner working
- <br>
+<details>
+<summary>Successful login success message, Agent name in top right corner working</summary>
 
- ![Description](img/gif)
+![Successful login success message, Agent name in top right corner](assets/features/9-login-success.gif)
+</details>
 
- - GitHub log in working
- <br>
+<details>
+<summary>GitHub log in working</summary>
 
- ![Description](img/gif)
+![GitHub log in](assets/features/10-github-register.gif)
+</details>
 
- - Sure you want to log out page, logging out success message, no Agent name in top right corner working
- <br>
+<details>
+<summary>Sure you want to log out page, logging out success message, no Agent name in top right corner working</summary>
 
- ![Description](img/gif)
+![Sure you want to log out page, logging out success message, no Agent name in top right corner](assets/features/11-logout-success.gif)
+</details>
 
 ##### **Reports**
 
- - Paginated view of reports with like/dislike counters, next/back page button working
- <br>
+<details>
+<summary>Paginated view of reports with like/dislike counters, next/back page button working</summary>
 
- ![Description](img/gif)
+![Paginated view of reports with like/dislike counters, next/back page button](assets/features/12-reports-paginated.gif)
+</details>
 
- - Open an report, like/dislike buttons working
- <br>
+<details>
+<summary>Open an report, like/dislike buttons working</summary>
 
- ![Description](img/gif)
+![Open an report, like/dislike buttons](assets/features/13-open-report.gif)
+</details>
 
- - Adding a comment, comments counter updating, if no comments - message working
- <br>
+<details>
+<summary>Adding a comment, comments counter updating, if no comments - message working</summary>
 
- ![Description](img/gif)
+![Adding a comment, comments counter updating, if no comments - message](assets/features/14-comment.gif)
+</details>
 
 ##### **Create Report**
 
- - Adding a report, template image if no image uploaded, director approval needed message and redirect to My-Reports page, added report not visible on Reports page working
- <br>
+<details>
+<summary>Adding a report, template image if no image uploaded, director approval needed message and redirect to My-Reports page, added report not visible on Reports page working</summary>
 
- ![Description](img/gif)
+![Adding a report, template image if no image uploaded, director approval needed message and redirect](assets/features/15-add-report.gif)
+</details>
 
 ##### **My Reports**
 
- - Paginated view of user's reports, unique for each user, Update/Edit and Delete buttons show up for user's own report working
- <br>
+<details>
+<summary>Paginated view of user's reports, unique for each user, Update/Edit and Delete buttons show up for user's own report working</summary>
 
- ![Description](img/gif)
+![Paginated view of user's reports, unique for each user, Update/Edit and Delete buttons show up for user's own report](assets/features/16-user-report.gif)
+</details>
 
- - Update Report and success message working
- <br>
+<details>
+<summary>Update Report and success message working</summary>
 
- ![Description](img/gif)
+![Update Report and success message](assets/features/17-update-report.gif)
+</details>
 
- - Delete Report, 'are you sure' question and success message working
- <br>
+<details>
+<summary>Delete Report, 'are you sure' question and success message working</summary>
 
- ![Description](img/gif)
+![Delete Report, 'are you sure' question and success message](assets/features/18-delete-report.gif)
+</details>
 
 ##### **Admin/Director site differences**
 
- - Director access extra nav link for admin opening admin page in a separate tab, top right corner changes from Agent: *user* to Director: *user* working
- <br>
+<details>
+<summary>Director access extra nav link for admin opening admin page in a separate tab, top right corner changes from Agent: *user* to Director: *user* working</summary>
 
- ![Description](img/gif)
+![Director access extra nav link for admin opening admin page in a separate tab, top right corner changes from Agent: *user* to Director: *user*](assets/features/19-admin-login.gif)
+</details>
 
- - Reports and Create Report has no warning text for admin working
- <br>
+<details>
+<summary>Reports and Create Report has no warning text for admin working</summary>
 
- ![Description](img/gif)
+![Reports and Create Report has no warning text for admin](assets/features/20-admin-no-warning.gif/)
+</details>
 
 ##### **Admin page**
 
- - Admin can approve and publish report, visible on Reports page to a normal user working
- <br>
+<details>
+<summary>Admin can approve and publish report, visible on Reports page to a normal user working</summary>
 
- ![Description](img/gif)
+![Admin can approve and publish report, visible on Reports page to a normal user](assets/features/21-admin-report-approve.gif)
+</details>
 
- - Admin can create a draft report working
- <br>
+<details>
+<summary>Admin can create a draft report working</summary>
 
- ![Description](img/gif)
+![Admin can create a draft report](assets/features/22-admin-draft.gif)
+</details>
 
- - Admin can change a report, censoring perk working working
- <br>
+<details>
+<summary>Admin can change a report, censoring perk working</summary>
 
- ![Description](img/gif)
+![Admin can change a report, censoring perk working](assets/features/23-admin-censor.gif)
+</details>
 
- - Admin can delete a report and user working
- <br>
+<details>
+<summary>Admin can delete a report and user working</summary>
 
- ![Description](img/gif)
+![Admin can delete a report and user](assets/features/24-admin-delete.gif)
+</details>
 
-  - Admin can approve and change a comment working
- <br>
+<details>
+<summary>Admin can approve and change a comment working</summary>
 
- ![Description](img/gif)
+![Admin can approve and change a comment](assets/features/25-admin-comment-change.gif)
+</details>
 
-  - Admin can delete a comment working
- <br>
+<details>
+<summary>Admin can delete a comment working</summary>
 
- ![Description](img/gif)
+![Admin can delete a comment](assets/features/26-admin-delete-comment.gif)
+</details>
 
 ##### **Error pages**
 
-  - Error 400 (page not found) page with 'Go Home' button working
- <br>
+<details>
+<summary>Error 400 (page not found) page with 'Go Home' button working</summary>
 
- ![Description](img/gif)
+![Error 400 (page not found) page with 'Go Home' button](assets/features/27-error-400.gif)
+</details>
 
-   - Error 500 (internal server error) page with 'Go Home' button working. To simulate Error 500 workspace server page was used.
- <br>
+<details>
+<summary>Error 500 (internal server error) page with 'Go Home' button working</summary>
 
- ![Description](img/gif)
+![Error 500 (internal server error) page with 'Go Home' button](assets/features/28-error-500.gif)
+</details>
+
+---
+
+[Back to top ⇧](#federal-bureau-of-control)
+
+---
 
 #### **Responsiveness**
 
