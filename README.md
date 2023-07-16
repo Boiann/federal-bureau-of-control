@@ -122,7 +122,7 @@ The color scheme used in the project is not explicitly defined. Using Bootstrap 
 ### **Imagery**
 
 Only couple of images are used that are not user-submitted; 
- - the background inverted pyramid - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1688484957/c1b9dbyz6skmpuslnycf.png "Link to inverted pyramid background image")
+ - the background inverted pyramid - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1689443363/Mine/site-imgs/fbc-background-image_ldmqvl.png "Link to inverted pyramid background image")
  - the inverted pyramid spinning logo(used for favicon too) - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1688470337/Pyramid_Shape_lilgag.webp "Link to inverted pyramid logo image")
  - FBD Seal image found on intro/splash page (used as a report placeholder too) - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1688458922/fbc-seal-color_ppeq9n.png "Link to FBC Seal image")
  - FBD offices image found on home - [Cloudinary link](https://res.cloudinary.com/boiann/image/upload/v1688585865/wallpaperflare.com_wallpaper_nrvimz.jpg "Link to FBC offices image")
