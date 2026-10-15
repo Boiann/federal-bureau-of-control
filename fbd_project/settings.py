@@ -34,10 +34,10 @@ DEBUG = False
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = [
+    'federal-bureau-of-control.onrender.com',
     'federal-bureau-of-control.herokuapp.com',
     'localhost',
     '127.0.0.1',
-    '8000-boiann-federalbureauofc-cefpb3nwrvh.ws-eu101.gitpod.io',
 ]
 
 
